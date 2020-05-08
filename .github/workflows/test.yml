@@ -7,10 +7,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
       - name: Docker
-        uses: codecov/codecov-action@v1
         run: |
           npm run test:docker
           npm run coverage
+      - name: Codecov
+        uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
       - name: Posttest
