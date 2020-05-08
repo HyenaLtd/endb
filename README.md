@@ -131,7 +131,7 @@ class MyModule {
     constructor(options) {
         this.db = new Endb({
             uri: typeof opts.store === 'string' && opts.store,
-			store: typeof opts.store !== 'string' && opts.store
+            store: typeof opts.store !== 'string' && opts.store
             namespace: 'mymodule'
         });
     }
