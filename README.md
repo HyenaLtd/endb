@@ -1,6 +1,6 @@
 ![Endb](media/logo.png)
 
-# Endb &middot; [![Test](https://github.com/chroventer/endb/workflows/Test/badge.svg)](https://github.com/chroventer/endb) [![Coverage Status](https://coveralls.io/repos/github/chroventer/endb/badge.svg?branch=master)](https://coveralls.io/github/chroventer/endb?branch=master) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/chroventer/endb)](https://github.com/chroventer/endb) [![License](https://badgen.net/github/license/chroventer/endb)](https://github.com/chroventer/endb/blob/master/LICENSE)
+# Endb &middot; [![Test](https://github.com/chroventer/endb/workflows/Test/badge.svg)](https://github.com/chroventer/endb) [![codecov](https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/chroventer/endb) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/chroventer/endb)](https://github.com/chroventer/endb) [![License](https://badgen.net/github/license/chroventer/endb)](https://github.com/chroventer/endb/blob/master/LICENSE)
 
 Endb is a simple key-value storage for multiple database drivers. Supports MongoDB, MySQL, Postgres, Redis, and SQLite.
 
