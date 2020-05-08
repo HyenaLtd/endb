@@ -1,19 +1,18 @@
 'use strict';
 
 const EventEmitter = require('events');
-const mongodb = require('mongodb');
+const {MongoClient} = require('mongodb');
 
 module.exports = class MongoDB extends EventEmitter {
 	constructor(options = {}) {
 		super();
-		options.url = options.uri || undefined;
 		this.options = {
-			url: 'mongodb://127.0.0.1:27017',
+			uri: 'mongodb://127.0.0.1:27017',
 			collection: 'endb',
 			...options
 		};
 		this.db = new Promise((resolve) => {
-			mongodb.MongoClient.connect(this.options.url, (error, client) => {
+			MongoClient.connect(this.options.uri, (error, client) => {
 				if (error !== null) return this.emit('error', error);
 				const db = client.db();
 				const collection = db.collection(this.options.collection);

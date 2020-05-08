@@ -1,16 +1,16 @@
 'use strict';
 
 const EventEmitter = require('events');
-const redis = require('redis');
+const {createClient} = require('redis');
 
-module.exports = class Redis extends EventEmitter {
+module.exports = class EndbRedis extends EventEmitter {
 	constructor(options = {}) {
 		super();
 		if (options.uri && typeof options.url === 'undefined') {
 			options.url = options.uri;
 		}
 
-		const client = redis.createClient(options);
+		const client = createClient(options);
 		this.db = [
 			'get',
 			'set',
