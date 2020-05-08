@@ -58,7 +58,8 @@ module.exports = class MongoDB extends EventEmitter {
 
 	async has(key) {
 		const collection = await this.db;
-		return collection.find({key}).count() > 0;
+		const doc = await collection.findOne({key});
+		return Boolean(doc);
 	}
 
 	async set(key, value) {
