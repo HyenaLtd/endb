@@ -20,4 +20,4 @@ jspm_packages/
 
 # Coverage
 .nyc_output/
-coverage/
+coverage*
