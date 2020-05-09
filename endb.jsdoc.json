@@ -659,75 +659,6 @@
     "$docmaLink": "?api=endb#Endb#math"
   },
   {
-    "comment": "/**\n\t * Creates multiple instances of Endb.\n\t * @param {string[]} names An array of strings. Each element will create new instance.\n\t * @param {EndbOptions} [options=EndbOptions] The options for the instances.\n\t * @return {Object} An object containing created Endb instances.\n\t * @example\n\t * const endb = Endb.multi(['users', 'members']);\n\t * const endb = Endb.multi(['users', 'members'], {\n\t *     uri: 'sqlite://endb.sqlite',\n\t *     namespace: 'mydb'\n\t * });\n\t *\n\t * await enbb.users.set('foo', 'bar');\n\t * await endb.members.set('bar', 'foo');\n\t */",
-    "meta": {
-      "range": [
-        9862,
-        10150
-      ],
-      "filename": "index.js",
-      "lineno": 325,
-      "columnno": 1,
-      "path": "/home/runner/work/endb/endb/src",
-      "code": {
-        "id": "astnode100000851",
-        "name": "Endb.multi",
-        "type": "MethodDefinition",
-        "paramnames": [
-          "names",
-          "options"
-        ]
-      },
-      "vars": {
-        "": null
-      }
-    },
-    "description": "Creates multiple instances of Endb.",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array.<string>"
-          ]
-        },
-        "description": "An array of strings. Each element will create new instance.",
-        "name": "names"
-      },
-      {
-        "type": {
-          "names": [
-            "EndbOptions"
-          ]
-        },
-        "optional": true,
-        "defaultvalue": "EndbOptions",
-        "description": "The options for the instances.",
-        "name": "options"
-      }
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Object"
-          ]
-        },
-        "description": "An object containing created Endb instances."
-      }
-    ],
-    "examples": [
-      "const endb = Endb.multi(['users', 'members']);\nconst endb = Endb.multi(['users', 'members'], {\n    uri: 'sqlite://endb.sqlite',\n    namespace: 'mydb'\n});\n\nawait enbb.users.set('foo', 'bar');\nawait endb.members.set('bar', 'foo');"
-    ],
-    "name": "multi",
-    "longname": "Endb.multi",
-    "kind": "function",
-    "memberof": "Endb",
-    "scope": "static",
-    "$longname": "Endb.multi",
-    "$kind": "method",
-    "$docmaLink": "?api=endb#Endb.multi"
-  },
-  {
     "comment": "/**\n\t\t * The options the database was instantiated with.\n\t\t * @type {EndbOptions}\n\t\t */",
     "meta": {
       "range": [
@@ -765,15 +696,15 @@
     "comment": "/**\n\t * Pushes an item to the array value in the database.\n\t * @param {string} key The key of the element to push to.\n\t * @param {*} value The value to push.\n\t * @param {?string} [path] The path of the property of the value to push.\n\t * @param {boolean} [allowDuplicates=false] Whether or not, allow duplicates elements in the value.\n\t * @return {Promise<*>} The value to push.\n\t */",
     "meta": {
       "range": [
-        10537,
-        11178
+        9691,
+        10332
       ],
       "filename": "index.js",
-      "lineno": 346,
+      "lineno": 318,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100000897",
+        "id": "astnode100000851",
         "name": "Endb#push",
         "type": "MethodDefinition",
         "paramnames": [
@@ -855,15 +786,15 @@
     "comment": "/**\n\t * Removes an item from the array value of an element in the database.\n\t * Note: structured or complex data types such as arrays or objects cannot be removed from the value of the element.\n\t * @param {string} key The key of the element to remove.\n\t * @param {string} value The value to remove.\n\t * @param {?string} [path] The path of the property to remove.\n\t * @return {Promise<string>} The value to remove.\n\t */",
     "meta": {
       "range": [
-        11601,
-        12189
+        10755,
+        11343
       ],
       "filename": "index.js",
-      "lineno": 378,
+      "lineno": 350,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100001005",
+        "id": "astnode100000959",
         "name": "Endb#remove",
         "type": "MethodDefinition",
         "paramnames": [
@@ -933,15 +864,15 @@
     "comment": "/**\n\t * Sets an element to the database.\n\t * @param {string} key The key of the element to set to the database.\n\t * @param {*} value The value of the element to set to the database.\n\t * @param {?string} [path] The path of the property to set in the value.\n\t * @return {Promise<boolean>} Returns a boolean.\n\t * @example\n\t * await endb.set('foo', 'bar');\n\t * await endb.set('total', 400);\n\t * await endb.set('exists', false);\n\t * await endb.set('profile', {\n\t *   id: 1234567890,\n\t *   username: 'user',\n\t *   verified: true,\n\t *   nil: null\n\t * });\n\t * await endb.set('todo', [ 'Add a authentication system.', 'Refactor the generator' ]);\n\t *\n\t * await endb.set('profile', false, 'verified');\n\t * await endb.set('profile', 100, 'balance');\n\t */",
     "meta": {
       "range": [
-        12937,
-        13220
+        12091,
+        12374
       ],
       "filename": "index.js",
-      "lineno": 421,
+      "lineno": 393,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100001125",
+        "id": "astnode100001079",
         "name": "Endb#set",
         "type": "MethodDefinition",
         "paramnames": [
@@ -1014,15 +945,15 @@
     "comment": "/**\n\t * Returns an array that contains the values of each element.\n\t * @return {Promise<any[]>} Array that contains the values of each element.\n\t */",
     "meta": {
       "range": [
-        13373,
-        13472
+        12527,
+        12626
       ],
       "filename": "index.js",
-      "lineno": 437,
+      "lineno": 409,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100001188",
+        "id": "astnode100001142",
         "name": "Endb#values",
         "type": "MethodDefinition",
         "paramnames": []
