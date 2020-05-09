@@ -308,34 +308,6 @@ class Endb extends EventEmitter {
 	}
 
 	/**
-	 * Creates multiple instances of Endb.
-	 * @param {string[]} names An array of strings. Each element will create new instance.
-	 * @param {EndbOptions} [options=EndbOptions] The options for the instances.
-	 * @return {Object} An object containing created Endb instances.
-	 * @example
-	 * const endb = Endb.multi(['users', 'members']);
-	 * const endb = Endb.multi(['users', 'members'], {
-	 *     uri: 'sqlite://endb.sqlite',
-	 *     namespace: 'mydb'
-	 * });
-	 *
-	 * await enbb.users.set('foo', 'bar');
-	 * await endb.members.set('bar', 'foo');
-	 */
-	static multi(names, options = {}) {
-		if (!Array.isArray(names) || names.length === 0) {
-			throw new TypeError('Endb#math: names must be an array of strings.');
-		}
-
-		const instances = {};
-		for (const name of names) {
-			instances[name] = new Endb(options);
-		}
-
-		return instances;
-	}
-
-	/**
 	 * Pushes an item to the array value in the database.
 	 * @param {string} key The key of the element to push to.
 	 * @param {*} value The value to push.
