@@ -1,71 +1,74 @@
 'use strict';
 
 const apiTest = (test, Endb, options = {}) => {
-  test.beforeEach(async () => {
-    const endb = new Endb(options);
-    await endb.clear();
-  });
-
-  test.serial('All methods returns a Promise.', (t) => {
-    const endb = new Endb(options);
-    t.true(endb.ensure('foo', 'bar') instanceof Promise);
-    t.true(endb.get('foo') instanceof Promise);
-    t.true(endb.has('foo') instanceof Promise);
-    t.true(endb.set('foo', 'bar') instanceof Promise);
-    t.true(endb.all() instanceof Promise);
-    t.true(endb.entries() instanceof Promise);
-    t.true(endb.keys() instanceof Promise);
-    t.true(endb.values() instanceof Promise);
-    t.true(endb.delete('foo') instanceof Promise);
-    t.true(endb.clear() instanceof Promise);
-  });
-
-  test.serial('Endb#set resolves to true', async (t) => {
-    const endb = new Endb(options);
-    t.is(await endb.set('foo', 'bar'), true);
-  });
-
-  test.serial('Endb#get resolves to value', async (t) => {
-    const endb = new Endb(options);
-    await endb.set('foo', 'bar');
-    t.is(await endb.get('foo'), 'bar');
-  });
-
-  test.serial(
-    'Endb#get with non-existent key resolves to undefined',
-    async (t) => {
+  describe('Methods', () => {
+    beforeEach(async () => {
+      jest.setTimeout(30000);
       const endb = new Endb(options);
-      t.is(await endb.get('foo'), undefined);
-    }
-  );
+      await endb.clear();
+    });
 
-  test.serial('Endb#delete resolves to boolean', async (t) => {
-    const endb = new Endb(options);
-    await endb.set('foo', 'bar');
-    t.is(await endb.delete('foo'), true);
-  });
+    test('All methods return a Promise.', () => {
+      const endb = new Endb(options);
+      expect(endb.all()).toBeInstanceOf(Promise);
+      expect(endb.clear()).toBeInstanceOf(Promise);
+      expect(endb.delete('foo')).toBeInstanceOf(Promise);
+      expect(endb.ensure('foo', 'bar')).toBeInstanceOf(Promise);
+      expect(endb.entries()).toBeInstanceOf(Promise);
+      expect(endb.find((v) => v === 'foo')).toBeInstanceOf(Promise);
+      expect(endb.get('foo')).toBeInstanceOf(Promise);
+      expect(endb.has('foo')).toBeInstanceOf(Promise);
+      expect(endb.keys()).toBeInstanceOf(Promise);
+      expect(endb.set('foo', 'bar')).toBeInstanceOf(Promise);
+      expect(endb.values() instanceof Promise);
+    });
 
-  test.serial('Endb#clear resolves to undefined', async (t) => {
-    const endb = new Endb(options);
-    t.is(await endb.clear(), undefined);
-    await endb.set('foo', 'bar');
-    t.is(await endb.clear(), undefined);
-  });
+    test('endb.set() resolves to true', async () => {
+      const endb = new Endb(options);
+      expect(await endb.set('foo', 'bar')).toBeTruthy();
+    });
 
-  test.after.always(async () => {
-    const endb = new Endb(options);
-    await endb.clear();
+    test('endb.get() resolves to value', async () => {
+      const endb = new Endb(options);
+      await endb.set('foo', 'bar');
+      expect(await endb.get('foo')).toBe('bar');
+    });
+
+    test('endb.get() with non-existent key resolves to undefined', async () => {
+      const endb = new Endb(options);
+      expect(await endb.get('foo')).toBeUndefined();
+    });
+
+    test('endb.delete() resolves to boolean', async () => {
+      const endb = new Endb(options);
+      await endb.set('foo', 'bar');
+      expect(await endb.delete('foo')).toBeTruthy();
+    });
+
+    test('endb.clear() resolves to undefined', async () => {
+      const endb = new Endb(options);
+      expect(await endb.clear()).toBeUndefined();
+      await endb.set('foo', 'bar');
+      expect(await endb.clear()).toBeUndefined();
+    });
+
+    afterEach(async () => {
+      const endb = new Endb(options);
+      await endb.clear();
+    });
   });
 };
 
 const adapterTest = (test, Endb, options) => {
-  test.serial('URI automatically loads the storage adapters', async (t) => {
-    const endb = new Endb(options);
-    await endb.clear();
-    t.is(await endb.get('foo'), undefined);
-    await endb.set('foo', 'bar');
-    t.is(await endb.get('foo'), 'bar');
-    await endb.clear();
+  describe('Adapters', () => {
+    test('URI automatically loads the storage adapters', async () => {
+      const endb = new Endb(options);
+      await endb.clear();
+      expect(await endb.get('foo')).toBeUndefined();
+      await endb.set('foo', 'bar');
+      expect(await endb.get('foo')).toBe('bar');
+      await endb.clear();
+    });
   });
 };
 

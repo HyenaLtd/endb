@@ -1,6 +1,5 @@
 'use strict';
 
-const test = require('ava');
 const Endb = require('../../src');
 const { endbTest, adapterTest } = require('../functions');
 const {

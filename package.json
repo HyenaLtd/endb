@@ -20,14 +20,12 @@
     "./esm": "./esm/index.mjs"
   },
   "scripts": {
-    "lint": "xo src",
-    "lint:fix": "xo src --fix",
-    "test": "nyc ava --serial",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "eslint --ignore-path .gitignore --ext .js ./",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest --forceExit",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
     "posttest:docker": "docker-compose down --rmi local",
-    "docs:build": "node docs.js",
-    "prepublishOnly": "npm run lint && nyc ava test/index.js"
+    "docs:build": "node docs.js"
   },
   "keywords": [
     "endb",
@@ -47,34 +45,28 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "8.3.4",
-    "ava": "^3.7.1",
-    "codecov": "^3.6.5",
     "docma": "^3.2.2",
+    "eslint": "^7.0.0",
     "husky": "^4.2.5",
+    "jest": "^26.0.1",
     "lint-staged": "^10.2.2",
     "mongodb": "^3.5.6",
     "mysql2": "^2.1.0",
-    "nyc": "^15.0.1",
-    "pg": "^8.0.2",
+    "pg": "^8.1.0",
     "redis": "^3.0.2",
     "sql": "^0.78.0",
     "sqlite3": "^4.1.1",
     "xo": "^0.30.0"
   },
-  "ava": {
-    "timeout": "30s",
-    "files": [
-      "!test/functions.js"
-    ]
-  },
-  "xo": {
-    "prettier": true,
-    "rules": {
-      "guard-for-in": 0,
-      "no-negated-condition": 0,
-      "no-await-in-loop": 0,
-      "unicorn/explicit-length-check": 0,
-      "unicorn/no-fn-reference-in-iterator": 0
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
     }
   },
   "husky": {
