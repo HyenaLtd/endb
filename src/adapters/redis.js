@@ -63,7 +63,8 @@ module.exports = class EndbRedis extends EventEmitter {
 	}
 
 	async has(key) {
-		return this.db.exists(key);
+		const exists = await this.db.exists(key);
+		return Boolean(exists);
 	}
 
 	async set(key, value) {

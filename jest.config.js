@@ -6,6 +6,6 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: "coverage",
   testEnvironment: "node",
-  testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
+  testMatch: ["**/test/**/*.test.js"],
   verbose: true,
 };
