@@ -39,11 +39,6 @@ declare module 'endb' {
 		public clear(): Promise<undefined>;
 		public delete(key: string): Promise<boolean>;
 		public entries(): Promise<[string, TVal][]>;
-		public ensure<V>(
-			key: string,
-			value: V,
-			path?: string
-		): Promise<V | undefined>;
 		public find(
 			fn: FindPredicate<TVal>,
 			thisArg?: any
