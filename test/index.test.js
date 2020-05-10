@@ -4,11 +4,11 @@ const Endb = require('../src');
 const { endbTest } = require('./functions');
 
 describe('Core', () => {
-  test('it should return a class', () => {
+  it('should return a class', () => {
     expect(typeof Endb).toBe('function');
     expect(() => new Endb()).not.toThrow();
   });
-  test('it should integrate the adapter provided', async () => {
+  test('should integrate the adapter provided', async () => {
     const store = new Map();
     const endb = new Endb({ store });
     expect(store.size).toBe(0);
@@ -16,7 +16,7 @@ describe('Core', () => {
     expect(await endb.get('foo')).toBe('bar');
     expect(store.size).toBe(1);
   });
-  test('it should integrate custom serializers provided', async () => {
+  test('should integrate custom serializers provided', async () => {
     const store = new Map();
     const serialize = JSON.stringify;
     const deserialize = JSON.parse;

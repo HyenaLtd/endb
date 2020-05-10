@@ -53,6 +53,17 @@ const apiTest = (test, Endb, options = {}) => {
       expect(await endb.delete('foo', path)).toBe(true);
     });
 
+    test('.find(fn) resolves to value', async () => {
+      const endb = new Endb(options);
+      await endb.set('foo', 'bar');
+      expect(await endb.find((value) => value === 'bar')).toBe('bar');
+    });
+
+    test('.find(fn) with non-existent value resolves to undefined', async () => {
+      const endb = new Endb(options);
+      expect(await endb.find((value) => value === 'bar')).toBeUndefined();
+    });
+
     test('.get(key) resolves to value', async () => {
       const endb = new Endb(options);
       await endb.set('foo', 'bar');
@@ -179,7 +190,7 @@ const valueTest = (test, Endb, options) => {
 
 const adapterTest = (test, Endb, options) => {
   describe('Adapter Test', () => {
-    test('URI automatically loads the adapter', async () => {
+    it('should infer the adapter from the URI', async () => {
       const endb = new Endb(options);
       await endb.clear();
       expect(await endb.get('foo')).toBeUndefined();

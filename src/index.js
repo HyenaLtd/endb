@@ -162,18 +162,13 @@ class Endb extends EventEmitter {
 	 * The database elements is mapped by their `key`. If you want to find an element by key, you should use the `get` method instead.
 	 * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get MDN} for more details.
 	 * @param {Function} fn The function to execute on each value in the element.
-	 * @param {*} [thisArg] Object to use as `this` inside callback.
 	 * @return {Promise<*|void>} The first element in the database that satisfies the provided testing function. Otherwise `undefined` is returned
 	 * @example
 	 * await endb.find(v => v === 'bar'); // { key: 'foo', value: 'bar' }
 	 * await endb.find(v => v.verified === true); // { key: 'profile', value: { ... } }
 	 * await endb.find(v => v.desc === 'desc'); // undefined
 	 */
-	async find(fn, thisArg) {
-		if (typeof thisArg !== 'undefined') {
-			fn = fn.bind(thisArg);
-		}
-
+	async find(fn) {
 		const data = await this.all();
 		for (const {key, value} of data) {
 			if (fn(value, key)) return value;
