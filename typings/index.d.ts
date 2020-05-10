@@ -35,15 +35,10 @@ declare module 'endb' {
 	export class Endb<TVal> extends EventEmitter {
 		public options: EndbOptions<TVal>;
 		constructor(options?: string | Partial<EndbOptions<TVal>>);
-
-		public static multi<T>(
-			names: string[],
-			options?: Partial<EndbOptions<T>>
-		): Record<string, Endb<T>>;
 		public all(): Promise<Element<TVal>[] | undefined>;
 		public clear(): Promise<undefined>;
-		public delete(key: string | string[]): Promise<boolean>;
-		public entries(): Promise<readonly [string, TVal][]>;
+		public delete(key: string): Promise<boolean>;
+		public entries(): Promise<[string, TVal][]>;
 		public ensure<V>(
 			key: string,
 			value: V,
@@ -52,23 +47,10 @@ declare module 'endb' {
 		public find(
 			fn: FindPredicate<TVal>,
 			thisArg?: any
-		): Promise<Element<TVal> | undefined>;
+		): Promise<TVal | undefined>;
 		public get<V>(key: string, path?: string): Promise<V | undefined>;
 		public has(key: string, path?: string): Promise<boolean>;
 		public keys(): Promise<string[]>;
-		public math(
-			key: string,
-			operation: string,
-			operand: number,
-			path?: string
-		): Promise<true>;
-		public push<T>(
-			key: string,
-			value: T,
-			path?: string,
-			allowDuplicates?: boolean
-		): Promise<T>;
-		public remove(key: string, value: string, path?: string): Promise<any>;
 		public set<V>(key: string, value: V, path?: string): Promise<true>;
 		public values(): Promise<TVal[]>;
 	}
