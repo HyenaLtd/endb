@@ -8,6 +8,7 @@ describe('Core', () => {
     expect(typeof Endb).toBe('function');
     expect(() => new Endb()).not.toThrow();
   });
+
   it('should integrate the adapter provided', async () => {
     const store = new Map();
     const endb = new Endb({ store });
@@ -16,6 +17,7 @@ describe('Core', () => {
     expect(await endb.get('foo')).toBe('bar');
     expect(store.size).toBe(1);
   });
+  
   it('should integrate custom serializers provided', async () => {
     const store = new Map();
     const serialize = JSON.stringify;

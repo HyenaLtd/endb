@@ -188,10 +188,10 @@ const valueTest = (test, Endb, options) => {
   });
 };
 
-const adapterTest = (test, Endb, options) => {
+const adapterTest = (it, Endb, goodUri) => {
   describe('Adapter Test', () => {
     it('should infer the adapter from the URI', async () => {
-      const endb = new Endb(options);
+      const endb = new Endb(goodUri);
       await endb.clear();
       expect(await endb.get('foo')).toBeUndefined();
       await endb.set('foo', 'bar');
