@@ -20,7 +20,7 @@ declare module 'endb' {
     namespace: string;
     serialize: (data: TVal) => TSerialized;
     deserialize: (data: TSerialized) => TVal;
-    adapter?: string;
+    adapter?: 'mongodb' | 'mysql' | 'postgres' | 'postgresql' | 'redis' | 'sqlite' | 'sqlite3';
     store: EndbAdapter<TVal, TSerialized>;
     collection?: string;
     table?: string;
