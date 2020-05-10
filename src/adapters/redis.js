@@ -45,11 +45,6 @@ module.exports = class EndbRedis extends EventEmitter {
 		await this.db.del(...keys.concat(namespace));
 	}
 
-	async close() {
-		await this.db.disconnect();
-		return undefined;
-	}
-
 	async delete(key) {
 		const items = await this.db.del(key);
 		await this.db.srem(this._prefixNamespace(), key);

@@ -39,10 +39,6 @@ module.exports = class MongoDB extends EventEmitter {
 		await collection.deleteMany({key: new RegExp(`^${this.namespace}:`)});
 	}
 
-	async close() {
-		return this.client.close();
-	}
-
 	async delete(key) {
 		if (typeof key !== 'string') return false;
 		const collection = await this.db;
