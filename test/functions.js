@@ -47,6 +47,13 @@ const apiTest = (test, Endb, options = {}) => {
       expect(await endb.delete('foo')).toBe(false);
     });
 
+    test('.delete(key, path) deletes the property of the value', async () => {
+      const endb = new Endb(options);
+      const path = 'fizz.buzz';
+      await endb.set('foo', 'bar', path);
+      expect(await endb.delete('foo', path)).toBe(true);
+    });
+
     test('.get(key) resolves to value', async () => {
       const endb = new Endb(options);
       await endb.set('foo', 'bar');
