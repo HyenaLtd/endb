@@ -151,44 +151,6 @@ class Endb extends EventEmitter {
 		return store.delete(key);
 	}
 
-	/**
-	 * Ensures if an element exists in the database. If the element does not exist, sets the element to the database and returns the value.
-	 * @param {string} key The key of the element to ensure.
-	 * @param {*} value The value of the element to ensure.
-	 * @param {?string} [path]
-	 * @return {Promise<void|any>} The (default) value of the element.
-	 * @example
-	 * await endb.set('en', 'db');
-	 *
-	 * const data = await endb.ensure('foo', 'bar');
-	 * console.log(data); // 'bar'
-	 *
-	 * const data = await endb.ensure('en', 'db');
-	 * console.log(data); // 'db'
-	 */
-	async ensure(key, value, path = null) {
-		const exists = await this.has(key);
-		if (path !== null) {
-			if (!exists) throw new Error('Endb#ensure: key does not exist.');
-			const propValue = await this.has(key, path);
-			if (!propValue) {
-				const result = await this.get(key, value);
-				return result;
-			}
-
-			await this.set(key, value, path);
-			return value;
-		}
-
-		if (exists) {
-			const result = await this.get(key);
-			return result;
-		}
-
-		await this.set(key, value);
-		return value;
-	}
-
 	async entries() {
 		const elements = await this.all();
 		return elements.map(({key, value}) => [key, value]);
