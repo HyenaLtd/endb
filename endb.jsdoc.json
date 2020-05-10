@@ -237,98 +237,18 @@
     "$docmaLink": "?api=endb#Endb#delete"
   },
   {
-    "comment": "/**\n\t * Ensures if an element exists in the database. If the element does not exist, sets the element to the database and returns the value.\n\t * @param {string} key The key of the element to ensure.\n\t * @param {*} value The value of the element to ensure.\n\t * @param {?string} [path]\n\t * @return {Promise<void|any>} The (default) value of the element.\n\t * @example\n\t * await endb.set('en', 'db');\n\t *\n\t * const data = await endb.ensure('foo', 'bar');\n\t * console.log(data); // 'bar'\n\t *\n\t * const data = await endb.ensure('en', 'db');\n\t * console.log(data); // 'db'\n\t */",
-    "meta": {
-      "range": [
-        4726,
-        5222
-      ],
-      "filename": "index.js",
-      "lineno": 169,
-      "columnno": 1,
-      "path": "/home/runner/work/endb/endb/src",
-      "code": {
-        "id": "astnode100000456",
-        "name": "Endb#ensure",
-        "type": "MethodDefinition",
-        "paramnames": [
-          "key",
-          "value",
-          "path"
-        ]
-      },
-      "vars": {
-        "": null
-      }
-    },
-    "description": "Ensures if an element exists in the database. If the element does not exist, sets the element to the database and returns the value.",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "description": "The key of the element to ensure.",
-        "name": "key"
-      },
-      {
-        "type": {
-          "names": [
-            "*"
-          ]
-        },
-        "description": "The value of the element to ensure.",
-        "name": "value"
-      },
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "optional": true,
-        "nullable": true,
-        "name": "path",
-        "defaultvalue": null
-      }
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Promise.<(void|any)>"
-          ]
-        },
-        "description": "The (default) value of the element."
-      }
-    ],
-    "examples": [
-      "await endb.set('en', 'db');\n\nconst data = await endb.ensure('foo', 'bar');\nconsole.log(data); // 'bar'\n\nconst data = await endb.ensure('en', 'db');\nconsole.log(data); // 'db'"
-    ],
-    "name": "ensure",
-    "longname": "Endb#ensure",
-    "kind": "function",
-    "memberof": "Endb",
-    "scope": "instance",
-    "async": true,
-    "$longname": "Endb#ensure",
-    "$kind": "method",
-    "$docmaLink": "?api=endb#Endb#ensure"
-  },
-  {
     "comment": "/**\n\t * Finds a single item where the given function returns a truthy value.\n\t * Behaves like {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find Array.prototype.find}.\n\t * The database elements is mapped by their `key`. If you want to find an element by key, you should use the `get` method instead.\n\t * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get MDN} for more details.\n\t * @param {Function} fn The function to execute on each value in the element.\n\t * @param {*} [thisArg] Object to use as `this` inside callback.\n\t * @return {Promise<*|void>} The first element in the database that satisfies the provided testing function. Otherwise `undefined` is returned\n\t * @example\n\t * await endb.find(v => v === 'bar'); // { key: 'foo', value: 'bar' }\n\t * await endb.find(v => v.verified === true); // { key: 'profile', value: { ... } }\n\t * await endb.find(v => v.desc === 'desc'); // undefined\n\t */",
     "meta": {
       "range": [
-        6337,
-        6568
+        5266,
+        5497
       ],
       "filename": "index.js",
-      "lineno": 210,
+      "lineno": 172,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100000573",
+        "id": "astnode100000482",
         "name": "Endb#find",
         "type": "MethodDefinition",
         "paramnames": [
@@ -389,15 +309,15 @@
     "comment": "/**\n\t * Gets the value of an element from the database by key.\n\t * @param {string} key The key of the element to get.\n\t * @param {?string} [path] The path of the property to get from the value.\n\t * @return {Promise<*|void>} The value of the element, or `undefined` if the element cannot be found in the database.\n\t * @example\n\t * const data = await endb.get('foo');\n\t * console.log(data); // 'bar'\n\t *\n\t * // Using path feature\n\t * await endb.get('profile', 'verified'); // false\n\t */",
     "meta": {
       "range": [
-        7057,
-        7418
+        5986,
+        6347
       ],
       "filename": "index.js",
-      "lineno": 235,
+      "lineno": 197,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100000620",
+        "id": "astnode100000529",
         "name": "Endb#get",
         "type": "MethodDefinition",
         "paramnames": [
@@ -460,15 +380,15 @@
     "comment": "/**\n\t * Checks whether an element exists in the database or not.\n\t * @param {string} key The key of an element to check for.\n\t * @param {?string} [path] The path of the property to check.\n\t * @return {Promise<boolean>} `true` if the element exists in the database, otherwise `false`.\n\t */",
     "meta": {
       "range": [
-        7711,
-        7963
+        6640,
+        6892
       ],
       "filename": "index.js",
-      "lineno": 252,
+      "lineno": 214,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100000683",
+        "id": "astnode100000592",
         "name": "Endb#has",
         "type": "MethodDefinition",
         "paramnames": [
@@ -528,15 +448,15 @@
     "comment": "/**\n\t * Returns an array that contains the keys of each element.\n\t * @return {Promise<string[]>} An array that contains the keys of each element.\n\t */",
     "meta": {
       "range": [
-        8118,
-        8211
+        7047,
+        7140
       ],
       "filename": "index.js",
-      "lineno": 268,
+      "lineno": 230,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100000739",
+        "id": "astnode100000648",
         "name": "Endb#keys",
         "type": "MethodDefinition",
         "paramnames": []
@@ -605,15 +525,15 @@
     "comment": "/**\n\t * Sets an element to the database.\n\t * @param {string} key The key of the element to set to the database.\n\t * @param {*} value The value of the element to set to the database.\n\t * @param {?string} [path] The path of the property to set in the value.\n\t * @return {Promise<boolean>} Returns a boolean.\n\t * @example\n\t * await endb.set('foo', 'bar');\n\t * await endb.set('total', 400);\n\t * await endb.set('exists', false);\n\t * await endb.set('profile', {\n\t *   id: 1234567890,\n\t *   username: 'user',\n\t *   verified: true,\n\t *   nil: null\n\t * });\n\t * await endb.set('todo', [ 'Add a authentication system.', 'Refactor the generator' ]);\n\t *\n\t * await endb.set('profile', false, 'verified');\n\t * await endb.set('profile', 100, 'balance');\n\t */",
     "meta": {
       "range": [
-        8959,
-        9242
+        7888,
+        8171
       ],
       "filename": "index.js",
-      "lineno": 294,
+      "lineno": 256,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100000761",
+        "id": "astnode100000670",
         "name": "Endb#set",
         "type": "MethodDefinition",
         "paramnames": [
@@ -686,15 +606,15 @@
     "comment": "/**\n\t * Returns an array that contains the values of each element.\n\t * @return {Promise<any[]>} Array that contains the values of each element.\n\t */",
     "meta": {
       "range": [
-        9395,
-        9494
+        8324,
+        8423
       ],
       "filename": "index.js",
-      "lineno": 310,
+      "lineno": 272,
       "columnno": 1,
       "path": "/home/runner/work/endb/endb/src",
       "code": {
-        "id": "astnode100000824",
+        "id": "astnode100000733",
         "name": "Endb#values",
         "type": "MethodDefinition",
         "paramnames": []
