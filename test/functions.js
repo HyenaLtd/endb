@@ -13,7 +13,6 @@ const apiTest = (test, Endb, options = {}) => {
       expect(endb.all()).toBeInstanceOf(Promise);
       expect(endb.clear()).toBeInstanceOf(Promise);
       expect(endb.delete('foo')).toBeInstanceOf(Promise);
-      expect(endb.ensure('foo', 'bar')).toBeInstanceOf(Promise);
       expect(endb.entries()).toBeInstanceOf(Promise);
       expect(endb.find((v) => v === 'foo')).toBeInstanceOf(Promise);
       expect(endb.get('foo')).toBeInstanceOf(Promise);
