@@ -1,5 +1,8 @@
 
-<html><head></head><body><p>![Endb](media/logo.png =512x512)</p>
+<html><head></head><body><a href="https://endb.js.org">
+    <img src="media/logo.png" alt="endb" width="375px" height="375px" style="max-width: 100%;">
+</a>
+
 <h1 id="endb--">Endb · <a href="https://github.com/chroventer/endb"><img src="https://github.com/chroventer/endb/workflows/Test/badge.svg" alt="Test" style="max-width: 100%;"></a> <a href="https://codecov.io/gh/chroventer/endb"><img src="https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg" alt="codecov" style="max-width: 100%;"></a> <a href="https://www.npmjs.com/package/endb"><img src="https://badgen.net/npm/dt/endb" alt="Downloads" style="max-width: 100%;"></a> <a href="https://github.com/chroventer/endb"><img src="https://badgen.net/github/stars/chroventer/endb" alt="GitHub Stars" style="max-width: 100%;"></a> <a href="https://github.com/chroventer/endb/blob/master/LICENSE"><img src="https://badgen.net/github/license/chroventer/endb" alt="License" style="max-width: 100%;"></a></h1>
 <hr />
 <p>Endb is a simple key-value storage for multiple database drivers. Supports MongoDB, MySQL, Postgres, Redis, and SQLite.</p>
@@ -41,7 +44,7 @@ const endb = new Endb('redis://user:pass@localhost:6379');
 const endb = new Endb('sqlite://path/to/database.sqlite');
 
 // Handles connection errors
-endb.on('error', error =&gt; console.error('Connection Error: ', error));
+endb.on('error', (error) =&gt; console.error('Connection Error: ', error));
 
 await endb.set('foo', 'bar'); // true
 await endb.get('foo'); // 'bar'
@@ -89,8 +92,8 @@ const endb = new Endb({ store: lru });</code></pre>
 <p>Endb handles all the JSON data types including Buffer using its data serialization methods that encode Buffer data as a base64-encoded string, and decode JSON objects which contain buffer-like data, either as arrays of strings or numbers, into Buffer instances to ensure consistency across various backends.
 Optionally, pass your own data serialization methods to support extra data types.</p>
 <pre><code class="javascript">const endb = new Endb({
-    serialize: JSON.stringify,
-    deserialize: JSON.parse
+  serialize: JSON.stringify,
+  deserialize: JSON.parse,
 });</code></pre>
 <p><strong>Warning</strong>: Using custom serializers means you lose any guarantee of data consistency.</p>
 <h2 id="embeddable">Embeddable</h2>
