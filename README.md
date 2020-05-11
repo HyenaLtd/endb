@@ -1,4 +1,6 @@
-![Endb](media/logo.png =512x512)
+<a href="https://endb.js.org">
+    <img src="media/logo.png" alt="endb" width="375px" height="375px" />
+</a>
 
 # Endb &middot; [![Test](https://github.com/chroventer/endb/workflows/Test/badge.svg)](https://github.com/chroventer/endb) [![codecov](https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/chroventer/endb) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/chroventer/endb)](https://github.com/chroventer/endb) [![License](https://badgen.net/github/license/chroventer/endb)](https://github.com/chroventer/endb/blob/master/LICENSE)
 
@@ -50,7 +52,7 @@ const endb = new Endb('redis://user:pass@localhost:6379');
 const endb = new Endb('sqlite://path/to/database.sqlite');
 
 // Handles connection errors
-endb.on('error', error => console.error('Connection Error: ', error));
+endb.on('error', (error) => console.error('Connection Error: ', error));
 
 await endb.set('foo', 'bar'); // true
 await endb.get('foo'); // 'bar'
@@ -114,8 +116,8 @@ Optionally, pass your own data serialization methods to support extra data types
 
 ```javascript
 const endb = new Endb({
-    serialize: JSON.stringify,
-    deserialize: JSON.parse
+  serialize: JSON.stringify,
+  deserialize: JSON.parse,
 });
 ```
 
@@ -147,7 +149,7 @@ const myModule = new AwesomeModule({ store: thirdPartyAdapter });
 
 ## Links
 
-- [Documentation](https://endb.js.org "Documentation")
+- [Documentation](https://endb.js.org 'Documentation')
 - [Discord](https://discord.gg/d5SYmjj)
-- [GitHub](https://github.com/chroventer/endb "GitHub")
-- [NPM](https://npmjs.com/package/endb "NPM")
+- [GitHub](https://github.com/chroventer/endb 'GitHub')
+- [NPM](https://npmjs.com/package/endb 'NPM')
