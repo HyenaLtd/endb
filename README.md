@@ -2,7 +2,7 @@
     <img src="media/logo.png" alt="endb" width="375px" height="375px" />
 </a>
 
-# Endb &middot; [![Test](https://github.com/chroventer/endb/workflows/Test/badge.svg)](https://github.com/chroventer/endb) [![codecov](https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/chroventer/endb) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/chroventer/endb)](https://github.com/chroventer/endb) [![License](https://badgen.net/github/license/chroventer/endb)](https://github.com/chroventer/endb/blob/master/LICENSE)
+# Endb &middot; [![Test](https://github.com/endbjs/endb/workflows/Test/badge.svg)](https://github.com/endbjs/endb) [![codecov](https://codecov.io/gh/endbjs/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/endbjs/endb) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/endbjs/endb)](https://github.com/endbjs/endb) [![License](https://badgen.net/github/license/endbjs/endb)](https://github.com/endbjs/endb/blob/master/LICENSE)
 
 Endb is a simple key-value storage for multiple database drivers. Supports MongoDB, MySQL, Postgres, Redis, and SQLite.
 
@@ -151,5 +151,5 @@ const myModule = new AwesomeModule({ store: thirdPartyAdapter });
 
 - [Documentation](https://endb.js.org 'Documentation')
 - [Discord](https://discord.gg/d5SYmjj)
-- [GitHub](https://github.com/chroventer/endb 'GitHub')
+- [GitHub](https://github.com/endbjs/endb 'GitHub')
 - [NPM](https://npmjs.com/package/endb 'NPM')
