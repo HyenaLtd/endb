@@ -100,15 +100,6 @@ const myAdapter = require('./my-adapter');
 const endb = new Endb({ store: myAdapter });
 ```
 
-For example, [`quick-lru`](https://github.com/sindresorhus/quick-lru) is an unrelated and independent module that has an API similar to that of Endb.
-
-```javascript
-const QuickLRU = require('quick-lru');
-
-const lru = new QuickLRU({ maxSize: 1000 });
-const endb = new Endb({ store: lru });
-```
-
 ## Custom Serializers
 
 Endb handles all the JSON data types including Buffer using its data serialization methods that encode Buffer data as a base64-encoded string, and decode JSON objects which contain buffer-like data, either as arrays of strings or numbers, into Buffer instances to ensure consistency across various backends.
