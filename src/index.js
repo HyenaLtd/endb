@@ -4,7 +4,7 @@ const EventEmitter = require('events');
 const _get = require('lodash/get');
 const _has = require('lodash/has');
 const _set = require('lodash/set');
-const _toPath = require('lodash/toPath');
+const _unset = require('lodash/unset');
 const {parse, stringify} = require('buffer-json');
 
 const load = (options) => {
@@ -126,22 +126,8 @@ class Endb extends EventEmitter {
 	 */
 	async delete(key, path = null) {
 		if (path !== null) {
-			let value = await this.get(key);
-			path = _toPath(path);
-			const last = path.pop();
-			const propValue = path.length ? _get(value, path) : value;
-			if (Array.isArray(propValue)) {
-				propValue.splice(last, 1);
-			} else {
-				delete propValue[last];
-			}
-
-			if (path.length) {
-				_set(value, path, propValue);
-			} else {
-				value = propValue;
-			}
-
+			const value = await this.get(key);
+			_unset(value, path);
 			const result = await this.set(key, value);
 			return result;
 		}
