@@ -2,7 +2,7 @@
     <img src="media/logo.png" alt="endb" width="375px" height="375px" />
 </a>
 
-# Endb &middot; [![Test](https://github.com/endbjs/endb/workflows/Test/badge.svg)](https://github.com/endbjs/endb) [![codecov](https://codecov.io/gh/endbjs/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/endbjs/endb) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/endbjs/endb)](https://github.com/endbjs/endb) [![License](https://badgen.net/github/license/endbjs/endb)](https://github.com/endbjs/endb/blob/master/LICENSE)
+# Endb &middot; [![Test](https://github.com/endbjs/endb/workflows/Test/badge.svg)](https://github.com/endbjs/endb) [![codecov](https://codecov.io/gh/endbjs/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/endbjs/endb) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/endbjs/endb)](https://github.com/endbjs/endb) [![License](https://badgen.net/github/license/endbjs/endb)](https://github.com/endbjs/endb/blob/master/LICENSE) [![Discord](https://discordapp.com/api/guilds/697425515363172362/embed.png)](https://discord.gg/d5SYmjj)
 
 Endb is a simple key-value storage for multiple database drivers. Supports MongoDB, MySQL, Postgres, Redis, and SQLite.
 
