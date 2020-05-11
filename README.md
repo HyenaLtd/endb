@@ -1,4 +1,4 @@
-![Endb](media/logo.png)
+![Endb](media/logo.png =512x512)
 
 # Endb &middot; [![Test](https://github.com/chroventer/endb/workflows/Test/badge.svg)](https://github.com/chroventer/endb) [![codecov](https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/chroventer/endb) [![Downloads](https://badgen.net/npm/dt/endb)](https://www.npmjs.com/package/endb) [![GitHub Stars](https://badgen.net/github/stars/chroventer/endb)](https://github.com/chroventer/endb) [![License](https://badgen.net/github/license/chroventer/endb)](https://github.com/chroventer/endb/blob/master/LICENSE)
 
