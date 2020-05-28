@@ -4,13 +4,12 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
       - name: Install Node
         uses: actions/setup-node@master
         with:
           node-version: 12
-      - name: Installation
-        run: npm install
-      - name: Lint
-        run: npm run lint
+      - name: Install dependencies
+        run: yarn install
+      - name: Run lint script
+        run: yarn lint --fix

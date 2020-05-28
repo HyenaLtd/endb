@@ -4,11 +4,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@master
-      - name: Docker
-        run: npm run test:docker
+      - uses: actions/checkout@master
+      - name: Run test script
+        run: yarn test:docker
       - name: Upload coverage
         uses: codecov/codecov-action@v1
-      - name: Posttest
-        run: npm run posttest:docker
+      - name: Run posttest script
+        run: yarn posttest:docker

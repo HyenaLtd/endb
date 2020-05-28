@@ -21,7 +21,6 @@
   },
   "scripts": {
     "lint": "eslint --ignore-path .gitignore --ext .js ./",
-    "lint:fix": "npm run lint -- --fix",
     "test": "jest --ci --noStackTrace --forceExit",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
     "posttest:docker": "docker-compose down --rmi local",

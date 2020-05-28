@@ -6,16 +6,15 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
       - name: Install Node
         uses: actions/setup-node@master
         with:
-          node-version: 12
-      - name: Installation
-        run: npm install
+          node-version: '12.x'
+      - name: Install dependencies
+        run: yarn install
       - name: Build documentation
-        run: 'npm run docs:build'
+        run: 'yarn docs:build'
       - name: Deploy documentation
         if: success()
         uses: crazy-max/ghaction-github-pages@v1
