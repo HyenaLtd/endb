@@ -21,9 +21,8 @@
   },
   "scripts": {
     "lint": "eslint --ignore-path .gitignore --ext .js ./",
-    "test": "jest --ci --noStackTrace --forceExit",
+    "test": "jest --ci --noStackTrace --forceExit --runInBand",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
-    "posttest:docker": "docker-compose down --rmi local",
     "docs:build": "node docs.js"
   },
   "keywords": [
@@ -75,7 +74,7 @@
     }
   },
   "lint-staged": {
-    "*.js": "npm run lint:fix"
+    "*.js": "yarn lint --fix"
   },
   "commitlint": {
     "extends": [

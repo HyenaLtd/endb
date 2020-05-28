@@ -9,5 +9,3 @@ jobs:
         run: yarn test:docker
       - name: Upload coverage
         uses: codecov/codecov-action@v1
-      - name: Run posttest script
-        run: yarn posttest:docker

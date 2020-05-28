@@ -3,7 +3,7 @@
 const apiTest = (test, Endb, options = {}) => {
   describe('API Test', () => {
     beforeEach(async () => {
-      jest.setTimeout(30000);
+      jest.setTimeout(20000);
       const endb = new Endb(options);
       await endb.clear();
     });
