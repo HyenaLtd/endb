@@ -21,3 +21,7 @@ jspm_packages/
 # Coverage
 .nyc_output/
 coverage*
+
+# Lock files
+package-lock.json
+yarn.lock
