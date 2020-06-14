@@ -16,7 +16,7 @@
     "mongodb": "3.5.7"
   },
   "devDependencies": {
-    "@endb/test": "^1.1.0",
-    "endb": "^1.1.0"
+    "@endb/test": "*",
+    "endb": "*"
   }
 }
