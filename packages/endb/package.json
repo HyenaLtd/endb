@@ -18,6 +18,5 @@
   },
   "devDependencies": {
     "@endb/test": "^1.1.0"
-  },
-  "gitHead": "0e46fe0b94de8b6ea1a4ea981bcedf11689c773e"
+  }
 }
