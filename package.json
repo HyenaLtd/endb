@@ -1,4 +1,5 @@
 {
+  "name": "endb",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -11,8 +12,6 @@
     "build:docs": "node docs.js"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
     "docma": "^3.2.2",
     "eslint": "^7.2.0",
     "husky": "^4.2.5",
@@ -42,14 +41,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   },
   "lint-staged": {
     "*.js": "yarn lint --fix"
