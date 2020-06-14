@@ -1,6 +1,6 @@
 {
   "name": "@endb/sql",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "SQL adapter for Endb.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
