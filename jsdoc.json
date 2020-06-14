@@ -1,0 +1,1156 @@
+[
+  {
+    "comment": "/**\n   * Creates a new Endb instance\n   * @param {string|EndbOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        1262,
+        1849
+      ],
+      "filename": "index.js",
+      "lineno": 48,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000108",
+        "name": "Endb",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Creates a new Endb instance",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string",
+            "EndbOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "name": "Endb",
+    "longname": "Endb",
+    "kind": "class",
+    "scope": "global",
+    "undocumented": true,
+    "$longname": "Endb",
+    "$kind": "constructor",
+    "$docmaLink": "api/#Endb"
+  },
+  {
+    "comment": "/**\n   * Creates a new Endb instance\n   * @param {string|EndbOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        1262,
+        1849
+      ],
+      "filename": "index.js",
+      "lineno": 48,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000108",
+        "name": "Endb",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      }
+    },
+    "name": "Endb",
+    "longname": "Endb",
+    "kind": "class",
+    "description": "Creates a new Endb instance",
+    "scope": "global",
+    "classdesc": "Endb",
+    "augments": [
+      "EventEmitter"
+    ],
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string",
+            "EndbOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "$longname": "Endb",
+    "$kind": "constructor",
+    "$docmaLink": "api/#Endb"
+  },
+  {
+    "comment": "/**\n   * Gets all the elements from the database\n   * @return {Promise<any[]>} An array containing all the elements\n   */",
+    "meta": {
+      "range": [
+        1977,
+        2609
+      ],
+      "filename": "index.js",
+      "lineno": 77,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000208",
+        "name": "Endb#all",
+        "type": "MethodDefinition",
+        "paramnames": []
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Gets all the elements from the database",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Array.<any>>"
+          ]
+        },
+        "description": "An array containing all the elements"
+      }
+    ],
+    "name": "all",
+    "longname": "Endb#all",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "params": [],
+    "async": true,
+    "$longname": "Endb#all",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#all"
+  },
+  {
+    "comment": "/**\n   * Clears all elements from the database\n   * @return {Promise<void>}\n   */",
+    "meta": {
+      "range": [
+        2697,
+        2778
+      ],
+      "filename": "index.js",
+      "lineno": 107,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000307",
+        "name": "Endb#clear",
+        "type": "MethodDefinition",
+        "paramnames": []
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Clears all elements from the database",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<void>"
+          ]
+        }
+      }
+    ],
+    "name": "clear",
+    "longname": "Endb#clear",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "params": [],
+    "async": true,
+    "$longname": "Endb#clear",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#clear"
+  },
+  {
+    "comment": "/**\n   * Deletes an element from the database by key\n   * @param {string} key The key of the element to remove from the database\n   * @param {string} [path] The path of the property to remove from the value\n   * @return {Promise<boolean>} `true` if the element is deleted successfully, otherwise `false`\n   */",
+    "meta": {
+      "range": [
+        3094,
+        3428
+      ],
+      "filename": "index.js",
+      "lineno": 118,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000324",
+        "name": "Endb#delete",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "key",
+          "path"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Deletes an element from the database by key",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The key of the element to remove from the database",
+        "name": "key"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "description": "The path of the property to remove from the value",
+        "name": "path",
+        "defaultvalue": null
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<boolean>"
+          ]
+        },
+        "description": "`true` if the element is deleted successfully, otherwise `false`"
+      }
+    ],
+    "name": "delete",
+    "longname": "Endb#delete",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "async": true,
+    "$longname": "Endb#delete",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#delete"
+  },
+  {
+    "comment": "/**\n   * Returns an array that contains the keys and values of every element\n   * @return {Promise<Array<Array<string, any>>>}\n   */",
+    "meta": {
+      "range": [
+        3567,
+        3695
+      ],
+      "filename": "index.js",
+      "lineno": 135,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000387",
+        "name": "Endb#entries",
+        "type": "MethodDefinition",
+        "paramnames": []
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Returns an array that contains the keys and values of every element",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Array.<Array.<string, any>>>"
+          ]
+        }
+      }
+    ],
+    "name": "entries",
+    "longname": "Endb#entries",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "params": [],
+    "async": true,
+    "$longname": "Endb#entries",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#entries"
+  },
+  {
+    "comment": "/**\n   * Gets the value of an element from the database by key\n   * @param {string} key The key of the element to get\n   * @param {string} [path] The path of the property to get from the value\n   * @return {Promise<*|void>} The value of the element, or `undefined` if the element is not found in the database\n   */",
+    "meta": {
+      "range": [
+        4016,
+        4467
+      ],
+      "filename": "index.js",
+      "lineno": 146,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000413",
+        "name": "Endb#get",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "key",
+          "path"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Gets the value of an element from the database by key",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The key of the element to get",
+        "name": "key"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "description": "The path of the property to get from the value",
+        "name": "path",
+        "defaultvalue": null
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<(*|void)>"
+          ]
+        },
+        "description": "The value of the element, or `undefined` if the element is not found in the database"
+      }
+    ],
+    "name": "get",
+    "longname": "Endb#get",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "async": true,
+    "$longname": "Endb#get",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#get"
+  },
+  {
+    "comment": "/**\n   * Checks whether an element exists in the database or not\n   * @param {string} key The key of an element to check for\n   * @param {?string} [path] The path of the property to check for\n   * @return {Promise<boolean>} `true` if the element exists in the database, otherwise `false`\n   */",
+    "meta": {
+      "range": [
+        4767,
+        5042
+      ],
+      "filename": "index.js",
+      "lineno": 169,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000479",
+        "name": "Endb#has",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "key",
+          "path"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Checks whether an element exists in the database or not",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The key of an element to check for",
+        "name": "key"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "nullable": true,
+        "description": "The path of the property to check for",
+        "name": "path",
+        "defaultvalue": null
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<boolean>"
+          ]
+        },
+        "description": "`true` if the element exists in the database, otherwise `false`"
+      }
+    ],
+    "name": "has",
+    "longname": "Endb#has",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "async": true,
+    "$longname": "Endb#has",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#has"
+  },
+  {
+    "comment": "/**\n   * Returns an array that contains the keys of every element\n   * @return {Promise<string[]>}\n   */",
+    "meta": {
+      "range": [
+        5153,
+        5261
+      ],
+      "filename": "index.js",
+      "lineno": 185,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000535",
+        "name": "Endb#keys",
+        "type": "MethodDefinition",
+        "paramnames": []
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Returns an array that contains the keys of every element",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Array.<string>>"
+          ]
+        }
+      }
+    ],
+    "name": "keys",
+    "longname": "Endb#keys",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "params": [],
+    "async": true,
+    "$longname": "Endb#keys",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#keys"
+  },
+  {
+    "comment": "/**\n     * The options for Endb\n     * @type {EndbOptions}\n     */",
+    "meta": {
+      "range": [
+        1379,
+        1561
+      ],
+      "filename": "index.js",
+      "lineno": 55,
+      "columnno": 4,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000119",
+        "name": "this.options",
+        "type": "ObjectExpression",
+        "value": "{\"namespace\":\"endb\",\"serialize\":\"\",\"deserialize\":\"\"}",
+        "paramnames": []
+      }
+    },
+    "description": "The options for Endb",
+    "type": {
+      "names": [
+        "EndbOptions"
+      ]
+    },
+    "name": "options",
+    "longname": "Endb#options",
+    "kind": "member",
+    "memberof": "Endb",
+    "scope": "instance",
+    "$longname": "Endb#options",
+    "$kind": "property",
+    "$docmaLink": "api/#Endb#options"
+  },
+  {
+    "comment": "/**\n   * Sets an element to the database.\n   * @param {string} key The key of the element to set to the database.\n   * @param {*} value The value of the element to set to the database.\n   * @param {string} [path] The path of the property to set in the value.\n   * @return {Promise<boolean>}\n   */",
+    "meta": {
+      "range": [
+        5564,
+        5923
+      ],
+      "filename": "index.js",
+      "lineno": 197,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000557",
+        "name": "Endb#set",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "key",
+          "value",
+          "path"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Sets an element to the database.",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The key of the element to set to the database.",
+        "name": "key"
+      },
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "description": "The value of the element to set to the database.",
+        "name": "value"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "description": "The path of the property to set in the value.",
+        "name": "path",
+        "defaultvalue": null
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<boolean>"
+          ]
+        }
+      }
+    ],
+    "name": "set",
+    "longname": "Endb#set",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "async": true,
+    "$longname": "Endb#set",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#set"
+  },
+  {
+    "comment": "/**\n   * Returns an array that contains the values of every element\n   * @return {Promise<any[]>} An array containing all the values of elements\n   */",
+    "meta": {
+      "range": [
+        6080,
+        6192
+      ],
+      "filename": "index.js",
+      "lineno": 214,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/endb/src",
+      "code": {
+        "id": "astnode100000624",
+        "name": "Endb#values",
+        "type": "MethodDefinition",
+        "paramnames": []
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Returns an array that contains the values of every element",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Array.<any>>"
+          ]
+        },
+        "description": "An array containing all the values of elements"
+      }
+    ],
+    "name": "values",
+    "longname": "Endb#values",
+    "kind": "function",
+    "memberof": "Endb",
+    "scope": "instance",
+    "params": [],
+    "async": true,
+    "$longname": "Endb#values",
+    "$kind": "method",
+    "$docmaLink": "api/#Endb#values"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbMongo instance\n   * @param {EndbMongoOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        434,
+        1066
+      ],
+      "filename": "index.js",
+      "lineno": 21,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/mongo/src",
+      "code": {
+        "id": "astnode100000715",
+        "name": "EndbMongo",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Creates a new EndbMongo instance",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbMongoOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "name": "EndbMongo",
+    "longname": "EndbMongo",
+    "kind": "class",
+    "scope": "global",
+    "undocumented": true,
+    "$longname": "EndbMongo",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbMongo"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbMongo instance\n   * @param {EndbMongoOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        434,
+        1066
+      ],
+      "filename": "index.js",
+      "lineno": 21,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/mongo/src",
+      "code": {
+        "id": "astnode100000715",
+        "name": "EndbMongo",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      }
+    },
+    "name": "EndbMongo",
+    "longname": "EndbMongo",
+    "kind": "class",
+    "description": "Creates a new EndbMongo instance",
+    "scope": "global",
+    "classdesc": "EndbMongo",
+    "augments": [
+      "EventEmitter"
+    ],
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbMongoOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "$longname": "EndbMongo",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbMongo"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbSql instance\n   * @param {EndbMysqlOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        414,
+        786
+      ],
+      "filename": "index.js",
+      "lineno": 21,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/mysql/src",
+      "code": {
+        "id": "astnode100001020",
+        "name": "EndbMysql",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Creates a new EndbSql instance",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbMysqlOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "name": "EndbMysql",
+    "longname": "EndbMysql",
+    "kind": "class",
+    "scope": "global",
+    "undocumented": true,
+    "$longname": "EndbMysql",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbMysql"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbSql instance\n   * @param {EndbMysqlOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        414,
+        786
+      ],
+      "filename": "index.js",
+      "lineno": 21,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/mysql/src",
+      "code": {
+        "id": "astnode100001020",
+        "name": "EndbMysql",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      }
+    },
+    "name": "EndbMysql",
+    "longname": "EndbMysql",
+    "kind": "class",
+    "description": "Creates a new EndbSql instance",
+    "scope": "global",
+    "classdesc": "EndbSql",
+    "augments": [
+      "EndbSql"
+    ],
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbMysqlOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "$longname": "EndbMysql",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbMysql"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbPostgres instance\n   * @param {EndbPostgresOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        394,
+        790
+      ],
+      "filename": "index.js",
+      "lineno": 20,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/postgres/src",
+      "code": {
+        "id": "astnode100001096",
+        "name": "EndbPostgres",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Creates a new EndbPostgres instance",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbPostgresOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "name": "EndbPostgres",
+    "longname": "EndbPostgres",
+    "kind": "class",
+    "scope": "global",
+    "undocumented": true,
+    "$longname": "EndbPostgres",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbPostgres"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbPostgres instance\n   * @param {EndbPostgresOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        394,
+        790
+      ],
+      "filename": "index.js",
+      "lineno": 20,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/postgres/src",
+      "code": {
+        "id": "astnode100001096",
+        "name": "EndbPostgres",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      }
+    },
+    "name": "EndbPostgres",
+    "longname": "EndbPostgres",
+    "kind": "class",
+    "description": "Creates a new EndbPostgres instance",
+    "scope": "global",
+    "augments": [
+      "EndbSql"
+    ],
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbPostgresOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "$longname": "EndbPostgres",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbPostgres"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbRedis instance\n   * @param {EndbRedisOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        452,
+        995
+      ],
+      "filename": "index.js",
+      "lineno": 21,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/redis/src",
+      "code": {
+        "id": "astnode100001185",
+        "name": "EndbRedis",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Creates a new EndbRedis instance",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbRedisOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "name": "EndbRedis",
+    "longname": "EndbRedis",
+    "kind": "class",
+    "scope": "global",
+    "undocumented": true,
+    "$longname": "EndbRedis",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbRedis"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbRedis instance\n   * @param {EndbRedisOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        452,
+        995
+      ],
+      "filename": "index.js",
+      "lineno": 21,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/redis/src",
+      "code": {
+        "id": "astnode100001185",
+        "name": "EndbRedis",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      }
+    },
+    "name": "EndbRedis",
+    "longname": "EndbRedis",
+    "kind": "class",
+    "description": "Creates a new EndbRedis instance",
+    "scope": "global",
+    "augments": [
+      "EventEmitter"
+    ],
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbRedisOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "$longname": "EndbRedis",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbRedis"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbSql instance\n   * @param {EndbSqlOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        457,
+        1361
+      ],
+      "filename": "index.js",
+      "lineno": 22,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/sql/src",
+      "code": {
+        "id": "astnode100001512",
+        "name": "EndbSql",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Creates a new EndbSql instance",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbSqlOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "name": "EndbSql",
+    "longname": "EndbSql",
+    "kind": "class",
+    "scope": "global",
+    "undocumented": true,
+    "$longname": "EndbSql",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbSql"
+  },
+  {
+    "comment": "/**\n   * Creates a new EndbSql instance\n   * @param {EndbSqlOptions} [options={}]\n   */",
+    "meta": {
+      "range": [
+        457,
+        1361
+      ],
+      "filename": "index.js",
+      "lineno": 22,
+      "columnno": 2,
+      "path": "/home/runner/work/endb/endb/packages/sql/src",
+      "code": {
+        "id": "astnode100001512",
+        "name": "EndbSql",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      }
+    },
+    "name": "EndbSql",
+    "longname": "EndbSql",
+    "kind": "class",
+    "description": "Creates a new EndbSql instance",
+    "scope": "global",
+    "classdesc": "EndbSql",
+    "augments": [
+      "EventEmitter"
+    ],
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbSqlOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "$longname": "EndbSql",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbSql"
+  },
+  {
+    "comment": "/**\n\t * Creates a new EndbSqlite instance\n\t * @param {EndbSqliteOptions} [options={}]\n\t */",
+    "meta": {
+      "range": [
+        541,
+        1080
+      ],
+      "filename": "index.js",
+      "lineno": 23,
+      "columnno": 1,
+      "path": "/home/runner/work/endb/endb/packages/sqlite/src",
+      "code": {
+        "id": "astnode100002002",
+        "name": "EndbSqlite",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Creates a new EndbSqlite instance",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbSqliteOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "name": "EndbSqlite",
+    "longname": "EndbSqlite",
+    "kind": "class",
+    "scope": "global",
+    "undocumented": true,
+    "$longname": "EndbSqlite",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbSqlite"
+  },
+  {
+    "comment": "/**\n\t * Creates a new EndbSqlite instance\n\t * @param {EndbSqliteOptions} [options={}]\n\t */",
+    "meta": {
+      "range": [
+        541,
+        1080
+      ],
+      "filename": "index.js",
+      "lineno": 23,
+      "columnno": 1,
+      "path": "/home/runner/work/endb/endb/packages/sqlite/src",
+      "code": {
+        "id": "astnode100002002",
+        "name": "EndbSqlite",
+        "type": "MethodDefinition",
+        "paramnames": [
+          "options"
+        ]
+      }
+    },
+    "name": "EndbSqlite",
+    "longname": "EndbSqlite",
+    "kind": "class",
+    "description": "Creates a new EndbSqlite instance",
+    "scope": "global",
+    "classdesc": "EndbSqlite",
+    "augments": [
+      "EndbSql"
+    ],
+    "params": [
+      {
+        "type": {
+          "names": [
+            "EndbSqliteOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "name": "options"
+      }
+    ],
+    "$longname": "EndbSqlite",
+    "$kind": "constructor",
+    "$docmaLink": "api/#EndbSqlite"
+  }
+]
