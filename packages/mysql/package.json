@@ -1,6 +1,6 @@
 {
   "name": "@endb/mysql",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MySQL/MariaDB adapter for Endb",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -13,11 +13,11 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "@endb/sql": "1.0.0",
+    "@endb/sql": "^1.1.0",
     "mysql2": "2.1.0"
   },
   "devDependencies": {
-    "@endb/test": "*",
-    "endb": "*"
+    "@endb/test": "^1.1.0",
+    "endb": "^1.1.0"
   }
 }
