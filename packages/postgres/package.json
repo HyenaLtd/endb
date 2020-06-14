@@ -1,6 +1,6 @@
 {
   "name": "@endb/postgres",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PostgreSQL adapter for Endb",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -13,11 +13,11 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "@endb/sql": "*",
+    "@endb/sql": "^1.1.0",
     "pg": "8.2.1"
   },
   "devDependencies": {
-    "@endb/test": "*",
-    "endb": "*"
+    "@endb/test": "^1.1.0",
+    "endb": "^1.1.0"
   }
 }
