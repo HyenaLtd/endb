@@ -1,0 +1,23 @@
+{
+  "name": "@endb/sql",
+  "version": "1.0.0",
+  "description": "SQL adapter for Endb.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
+  "author": "chroventer (https://github.com/chroventer)",
+  "homepage": "https://endb.js.org",
+  "repository": "chroventer/endb",
+  "bugs": "https://github.com/chroventer/endb/issues",
+  "dependencies": {
+    "sql": "0.78.0"
+  },
+  "devDependencies": {
+    "@endb/test": "*",
+    "endb": "*",
+    "sqlite3": "4.2.0"
+  }
+}
