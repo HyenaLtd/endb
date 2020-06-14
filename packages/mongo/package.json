@@ -1,6 +1,6 @@
 {
   "name": "@endb/mongo",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "MongoDB adapter for Endb",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -18,6 +18,5 @@
   "devDependencies": {
     "@endb/test": "^1.1.0",
     "endb": "^1.1.0"
-  },
-  "gitHead": "0e46fe0b94de8b6ea1a4ea981bcedf11689c773e"
+  }
 }
