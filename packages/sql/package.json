@@ -1,6 +1,6 @@
 {
   "name": "@endb/sql",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "SQL adapter for Endb.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -19,5 +19,6 @@
     "@endb/test": "^1.1.0",
     "endb": "^1.1.0",
     "sqlite3": "4.2.0"
-  }
+  },
+  "gitHead": "0e46fe0b94de8b6ea1a4ea981bcedf11689c773e"
 }
