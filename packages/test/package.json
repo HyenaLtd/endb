@@ -3,14 +3,21 @@
   "private": true,
   "version": "1.1.0",
   "description": "Helper functions for tests.",
-  "main": "src/index.js",
-  "types": "typings/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "src"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "license": "MIT",
   "author": "chroventer (https://github.com/chroventer)",
   "homepage": "https://endb.js.org",
   "repository": "chroventer/endb",
-  "bugs": "https://github.com/chroventer/endb/issues"
+  "bugs": "https://github.com/chroventer/endb/issues",
+  "devDependencies": {
+    "endb": "*",
+    "@types/jest": "22.2.3"
+  }
 }

@@ -1,8 +1,6 @@
-'use strict';
-
-const Endb = require('endb');
-const EndbPostgres = require('../src');
-const {apiTest, adapterTest, valueTest, clearEach} = require('@endb/test');
+import Endb from 'endb';
+import EndbPostgres from '../src';
+import { clearEach, apiTest, adapterTest, valueTest } from '@endb/test';
 
 const {
 	POSTGRES_HOST = 'localhost',

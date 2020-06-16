@@ -1,42 +1,44 @@
 {
-  "name": "endb",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .js packages/**",
+    "lint": "eslint --ext .js,.ts packages/**/src/**",
     "test": "jest --ci --forceExit",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
-    "publish": "lerna publish",
+    "build": "lerna run build",
     "build:docs": "node docs.js"
   },
   "devDependencies": {
-    "docma": "^3.2.2",
+    "@types/jest": "^26.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "eslint": "^7.2.0",
     "husky": "^4.2.5",
     "jest": "26.0.1",
     "lerna": "3.22.1",
-    "lint-staged": "^10.2.10"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "coverage",
-    "testEnvironment": "node",
-    "roots": [
-      "<rootDir>/packages"
-    ],
-    "verbose": true
+    "lint-staged": "^10.2.10",
+    "ts-jest": "^26.1.0",
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.5"
   },
   "eslintConfig": {
-    "extends": "eslint:recommended",
-    "env": {
-      "es6": true,
-      "node": true,
-      "jest": true
-    },
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
     "parserOptions": {
-      "ecmaVersion": 2018
+      "project": "tsconfig.json"
+    },
+    "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "off"
     }
   },
   "husky": {
