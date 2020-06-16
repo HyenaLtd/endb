@@ -22,7 +22,6 @@
   "devDependencies": {
     "@endb/test": "*",
     "@types/node": "12.12.2",
-    "endb": "*",
     "sqlite3": "4.2.0"
   }
 }
