@@ -1,8 +1,13 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./packages",
-    "paths": {
-      "@endb/": ["./*/src"]
-    }
-  }
+  "files": [],
+  "references": [
+    { "path": "packages/endb" },
+    { "path": "packages/mongo" },
+    { "path": "packages/mysql" },
+    { "path": "packages/postgres" },
+    { "path": "packages/redis" },
+    { "path": "packages/sql" },
+    { "path": "packages/sqlite" },
+    { "path": "packages/test" }
+  ]
 }
