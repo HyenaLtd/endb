@@ -19,15 +19,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "exclude": ["node_modules", "dist", "**/.test.ts"],
-  "references": [
-    { "path": "packages/endb" },
-    { "path": "packages/mongo" },
-    { "path": "packages/mysql" },
-    { "path": "packages/postgres" },
-    { "path": "packages/redis" },
-    { "path": "packages/sql" },
-    { "path": "packages/sqlite" },
-    { "path": "packages/test" }
-  ]
+  "exclude": ["node_modules", "dist", "**/.test.ts"]
 }
