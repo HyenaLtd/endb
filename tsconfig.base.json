@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "composite": true,
+    "strict": true
+  },
+  "exclude": ["node_modules", "dist", "**/.test.ts"]
+}
