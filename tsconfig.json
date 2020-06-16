@@ -1,22 +1,33 @@
 {
-    "compilerOptions": {
-        "target": "ES2019",
-        "module": "CommonJS",
-        "moduleResolution": "Node",
-        "esModuleInterop": true,
-        "declaration": true,
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "composite": true,
 
-        "strict": true,
-        "alwaysStrict": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "strictPropertyInitialization": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
 
-        "noImplicitAny": true,
-        "noImplicitThis": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true
-    },
-    "exclude": ["node_modules", "dist", "**/.test.ts"]
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": ["node_modules", "dist", "**/.test.ts"],
+  "references": [
+    { "path": "packages/endb" },
+    { "path": "packages/mongo" },
+    { "path": "packages/mysql" },
+    { "path": "packages/postgres" },
+    { "path": "packages/redis" },
+    { "path": "packages/sql" },
+    { "path": "packages/sqlite" },
+    { "path": "packages/test" }
+  ]
 }

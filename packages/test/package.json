@@ -17,7 +17,6 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "devDependencies": {
-    "endb": "*",
-    "@types/jest": "22.2.3"
+    "endb": "*"
   }
 }
