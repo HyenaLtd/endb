@@ -4,12 +4,11 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .js,.ts packages/**/src/**",
+    "lint": "eslint --ext .ts packages/*/src/**",
     "test": "jest --ci --forceExit",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
-    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "build:docs": "node docs.js"
+    "build:docs": "typedoc"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",

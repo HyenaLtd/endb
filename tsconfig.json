@@ -1,13 +1,19 @@
 {
-  "files": [],
-  "references": [
-    { "path": "packages/endb" },
-    { "path": "packages/mongo" },
-    { "path": "packages/mysql" },
-    { "path": "packages/postgres" },
-    { "path": "packages/redis" },
-    { "path": "packages/sql" },
-    { "path": "packages/sqlite" },
-    { "path": "packages/test" }
-  ]
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "composite": true,
+    "strict": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "paths": {
+      "@endb/": ["packages/*/src"],
+      "endb": ["packages/endb/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "**/.test.ts"]
 }
