@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Key-value storage with support for multiple databases",
   "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "typings": "typings/index.d.ts",
   "files": [
     "src"
   ],
