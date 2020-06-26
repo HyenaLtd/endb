@@ -11,14 +11,10 @@
     "build:docs": "node docs.js"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
     "docma": "^3.2.2",
     "eslint": "^7.2.0",
-    "husky": "^4.2.5",
     "jest": "26.0.1",
-    "lerna": "3.22.1",
-    "lint-staged": "^10.2.10"
+    "lerna": "3.22.1"
   },
   "jest": {
     "collectCoverage": true,
@@ -39,19 +35,5 @@
     "parserOptions": {
       "ecmaVersion": 2018
     }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "*.js": "yarn lint --fix"
   }
 }

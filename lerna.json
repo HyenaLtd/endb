@@ -6,6 +6,7 @@
   "version": "independent",
   "command": {
     "publish": {
+      "access": "public",
       "ignoreChanges": ["*.md", "**/__tests__/**"],
       "message": "chore(release): publish"
     }
