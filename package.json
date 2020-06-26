@@ -4,8 +4,8 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .ts packages/*/src/**",
-    "test": "jest --ci --forceExit",
+    "lint": "eslint --ext .js packages/**",
+    "test": "jest --ci --forceExit --runInBand",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
     "build": "lerna run build",
     "build:docs": "typedoc"
