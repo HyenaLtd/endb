@@ -1,7 +1,7 @@
+import { Element, EndbAdapter } from 'endb';
 import { EventEmitter } from 'events';
+import { ClientOpts, createClient } from 'redis';
 import { promisify } from 'util';
-import { createClient, ClientOpts } from 'redis';
-import { EndbAdapter, Element } from 'endb';
 
 export interface EndbRedisOptions extends ClientOpts {
   uri: string;
@@ -18,7 +18,7 @@ interface Client {
   keys: (pattern: string) => Promise<string[]>;
 }
 
-export default class EndbRedis<TVal = void> extends EventEmitter
+export default class EndbRedis<TVal> extends EventEmitter
   implements EndbAdapter<TVal> {
   public namespace!: string;
   private readonly db: Client;

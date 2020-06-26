@@ -1,5 +1,5 @@
+import { Element, EndbAdapter } from 'endb';
 import { EventEmitter } from 'events';
-import { EndbAdapter, Element } from 'endb';
 import { Sql } from 'sql-ts';
 import { SQLDialects } from 'sql-ts/dist/configTypes';
 import { TableWithColumns } from 'sql-ts/dist/table';
@@ -11,7 +11,7 @@ export interface EndbSqlOptions {
   keySize?: number;
 }
 
-export default abstract class EndbSql<TVal = void> extends EventEmitter
+export default abstract class EndbSql<TVal> extends EventEmitter
   implements EndbAdapter<TVal> {
   public namespace!: string;
   public readonly dialect: SQLDialects;

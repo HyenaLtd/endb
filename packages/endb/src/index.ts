@@ -1,5 +1,5 @@
-import { EventEmitter } from 'events';
 import BJSON from 'buffer-json';
+import { EventEmitter } from 'events';
 import _get from 'lodash/get';
 import _has from 'lodash/has';
 import _set from 'lodash/set';

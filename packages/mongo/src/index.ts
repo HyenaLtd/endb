@@ -1,6 +1,6 @@
+import { Element, EndbAdapter } from 'endb';
 import { EventEmitter } from 'events';
-import { MongoClient, Collection } from 'mongodb';
-import { EndbAdapter, Element } from 'endb';
+import { Collection, MongoClient } from 'mongodb';
 
 export interface EndbMongoOptions {
   uri: string;

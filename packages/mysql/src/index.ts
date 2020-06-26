@@ -1,6 +1,6 @@
-import mysql2 from 'mysql2/promise';
-import { EndbAdapter } from 'endb';
 import EndbSql from '@endb/sql';
+import { EndbAdapter } from 'endb';
+import mysql2 from 'mysql2/promise';
 
 export interface EndbMysqlOptions {
   uri: string;
