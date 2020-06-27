@@ -2,7 +2,7 @@
 <html><head></head><body><h1 id="-endb-sqlite"><code>@endb/sqlite</code></h1>
 <hr />
 <blockquote>
-<p>SQLite adapter for Endb</p>
+<p>SQLite adapter for <a href="https://github.com/chroventer/endb">Endb</a></p>
 </blockquote>
 <h2 id="installation">Installation</h2>
 <hr />
@@ -10,8 +10,13 @@
 <h2 id="usage">Usage</h2>
 <hr />
 <pre><code class="javascript">const Endb = require('endb');
-const EndbSqlite = require('@endb/sqlite');
+const endb = new Endb('sqlite://path/to/database.sqlite');</code></pre>
+<pre><code class="javascript">const EndbSqlite = require('@endb/sqlite');
 
-const store = new EndbSqlite({ uri: 'sqlite://path/to/database.sqlite', table: 'cache' });
+const store = new EndbSqlite({
+  uri: 'sqlite://path/to/database.sqlite',
+  table: 'cache',
+  busyTimeout: 10000,
+});
 const endb = new Endb({ store });</code></pre>
 </body></html>

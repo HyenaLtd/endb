@@ -2,7 +2,7 @@
 <html><head></head><body><h1 id="-endb-mysql"><code>@endb/mysql</code></h1>
 <hr />
 <blockquote>
-<p>MySQL/MariaDB adapter for Endb</p>
+<p>MySQL/MariaDB adapter for <a href="https://github.com/chroventer/endb">Endb</a></p>
 </blockquote>
 <h2 id="installation">Installation</h2>
 <hr />
@@ -10,8 +10,13 @@
 <h2 id="usage">Usage</h2>
 <hr />
 <pre><code class="javascript">const Endb = require('endb');
-const EndbMysql = require('@endb/mysql');
+const endb = new Endb('mysql://user:pass@localhost:3306/dbname');</code></pre>
+<pre><code class="javascript">const EndbMysql = require('@endb/mysql');
 
-const store = new EndbMysql({ uri: 'mysql://user:pass@localhost:3306/dbname', table: 'cache' });
+const store = new EndbMysql({
+  uri: 'mysql://user:pass@localhost:3306/dbname',
+  table: 'cache',
+  keySize: 255,
+});
 const endb = new Endb({ store });</code></pre>
 </body></html>

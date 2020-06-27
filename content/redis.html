@@ -2,7 +2,7 @@
 <html><head></head><body><h1 id="-endb-redis"><code>@endb/redis</code></h1>
 <hr />
 <blockquote>
-<p>Redis adapter for Endb</p>
+<p>Redis adapter for <a href="https://github.com/chroventer/endb">Endb</a></p>
 </blockquote>
 <h2 id="installation">Installation</h2>
 <hr />
@@ -10,8 +10,12 @@
 <h2 id="usage">Usage</h2>
 <hr />
 <pre><code class="javascript">const Endb = require('endb');
-const EndbRedis = require('@endb/redis');
+const endb = new Endb('redis://user:pass@localhost:6379');</code></pre>
+<pre><code class="javascript">const EndbRedis = require('@endb/redis');
 
-const store = new EndbRedis({ uri: 'redis://user:pass@localhost:6379' });
+const store = new EndbRedis({
+  uri: 'redis://user:pass@localhost:6379',
+  retry_unfulfilled_commands: true,
+});
 const endb = new Endb({ store });</code></pre>
 </body></html>

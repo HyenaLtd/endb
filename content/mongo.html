@@ -2,7 +2,7 @@
 <html><head></head><body><h1 id="-endb-mongo"><code>@endb/mongo</code></h1>
 <hr />
 <blockquote>
-<p>MongoDB adapter for Endb</p>
+<p>MongoDB adapter for <a href="https://github.com/chroventer/endb">Endb</a></p>
 </blockquote>
 <h2 id="installation">Installation</h2>
 <hr />
@@ -10,8 +10,12 @@
 <h2 id="usage">Usage</h2>
 <hr />
 <pre><code class="javascript">const Endb = require('endb');
-const EndbMongo = require('@endb/mongo');
+const endb = new Endb('mongodb://user:pass@localhost:27017/dbname');</code></pre>
+<pre><code class="javascript">const EndbMongo = require('@endb/mongo');
 
-const store = new EndbMongo({ uri: 'mongodb://user:pass@localhost:27017/dbname', collection: 'cache' });
+const store = new EndbMongo({
+  uri: 'mongodb://user:pass@localhost:27017/dbname',
+  collection: 'cache',
+});
 const endb = new Endb({ store });</code></pre>
 </body></html>
