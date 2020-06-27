@@ -1,6 +1,6 @@
-import { Endb } from 'endb';
+import { adapterTest, apiTest, clearEach, valueTest } from '@endb/test';
+import Endb from 'endb';
 import EndbRedis from '../src';
-import { clearEach, apiTest, adapterTest, valueTest } from '@endb/test';
 
 const { REDIS_HOST = 'localhost' } = process.env;
 const uri = `redis://${REDIS_HOST}`;

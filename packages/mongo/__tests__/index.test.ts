@@ -1,6 +1,6 @@
-import { Endb } from 'endb';
+import { adapterTest, apiTest, clearEach, valueTest } from '@endb/test';
+import Endb from 'endb';
 import EndbMongo from '../src';
-import { clearEach, apiTest, adapterTest, valueTest } from '@endb/test';
 
 const { MONGO_HOST = '127.0.0.1', MONGO_PORT = 27017 } = process.env;
 const uri = `mongodb://${MONGO_HOST}:${MONGO_PORT}?useUnifiedTopology=true`;

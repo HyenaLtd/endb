@@ -1,6 +1,6 @@
-import { Endb } from 'endb';
+import { adapterTest, apiTest, clearEach, valueTest } from '@endb/test';
+import Endb from 'endb';
 import EndbMysql from '../src';
-import { clearEach, apiTest, adapterTest, valueTest } from '@endb/test';
 
 const {
   MYSQL_HOST = 'mysql',

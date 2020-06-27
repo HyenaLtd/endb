@@ -1,8 +1,8 @@
-import { promisify } from 'util';
+import { apiTest, clearEach, valueTest } from '@endb/test';
+import Endb from 'endb';
 import { Database } from 'sqlite3';
-import { Endb } from 'endb';
+import { promisify } from 'util';
 import EndbSql from '../src';
-import { clearEach, apiTest, valueTest } from '@endb/test';
 
 class TestSqlite<TVal> extends EndbSql<TVal> {
   constructor() {

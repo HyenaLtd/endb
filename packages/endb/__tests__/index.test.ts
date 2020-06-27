@@ -1,5 +1,5 @@
-import { Endb } from '../src';
-import { apiTest, valueTest, clearEach } from '@endb/test';
+import { apiTest, clearEach, valueTest } from '@endb/test';
+import Endb from '../src';
 
 describe('endb', () => {
   beforeEach(() => clearEach(Endb));
