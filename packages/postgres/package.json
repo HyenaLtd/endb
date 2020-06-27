@@ -7,18 +7,21 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "license": "MIT",
   "author": "chroventer (https://github.com/chroventer)",
   "homepage": "https://endb.js.org",
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "@endb/sql": "*",
+    "@endb/sql": "1.1.0",
     "pg": "8.2.1"
   },
   "devDependencies": {
-    "endb": "*",
-    "@endb/test": "*",
-    "@types/pg": "7.4.8"
+    "endb": "1.1.0",
+    "@endb/test": "1.1.0",
+    "@types/pg": "7.14.3"
   }
 }

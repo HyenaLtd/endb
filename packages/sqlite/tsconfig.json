@@ -1,12 +1,7 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist"
-  },
-  "include": ["src/**/*"],
-  "references": [
-    { "path": "../endb" },
-    { "path": "../sql" },
-    { "path": "../test" }
-  ]
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
 }

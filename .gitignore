@@ -31,3 +31,4 @@ docs/
 
 # Build
 dist/
+tsconfig.tsbuildinfo

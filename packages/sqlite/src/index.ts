@@ -10,8 +10,9 @@ export interface EndbSqliteOptions {
   busyTimeout: number;
 }
 
-export default class EndbSqlite<TVal> extends EndbSql
+export default class EndbSqlite<TVal> extends EndbSql<TVal>
   implements EndbAdapter<TVal> {
+  public namespace!: string;
   constructor(options: Partial<EndbSqliteOptions> = {}) {
     const { uri = 'sqlite://:memory:' } = options;
     super({

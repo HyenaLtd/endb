@@ -1,18 +1,9 @@
-import EndbClass from 'endb';
-
-export const clearEach = async <T>(
-  Endb: typeof EndbClass,
-  options: T
-): Promise<void> => {
+export const clearEach = async (Endb: any, options = {}): Promise<void> => {
   const endb = new Endb(options);
   await endb.clear();
 };
 
-export const apiTest = <T>(
-  test: jest.It,
-  Endb: typeof EndbClass,
-  options: T
-): void => {
+export const apiTest = (test: jest.It, Endb: any, options = {}): void => {
   test('methods return a Promise', () => {
     const endb = new Endb(options);
     expect(endb.all()).toBeInstanceOf(Promise);
@@ -112,11 +103,7 @@ export const apiTest = <T>(
   });
 };
 
-export const valueTest = <T>(
-  test: jest.It,
-  Endb: typeof EndbClass,
-  options: T
-): void => {
+export const valueTest = (test: jest.It, Endb: any, options = {}): void => {
   test('value can be a boolean', async () => {
     const endb = new Endb(options);
     await endb.set('foo', true);
@@ -172,11 +159,11 @@ export const valueTest = <T>(
   });
 };
 
-export const adapterTest = <T>(
+export const adapterTest = (
   test: jest.It,
-  Endb: typeof EndbClass,
-  goodUri: T,
-  badUri: T
+  Endb: any,
+  goodUri = '',
+  badUri = ''
 ): void => {
   test('infers the adapter from the URI', async () => {
     const endb = new Endb(goodUri);

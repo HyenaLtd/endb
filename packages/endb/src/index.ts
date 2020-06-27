@@ -15,9 +15,7 @@ const adapters = {
   sqlite: '@endb/sqlite',
 };
 
-const load = <TVal>(
-  options: Partial<Endb.EndbOptions<TVal>>
-): Endb.EndbAdapter<TVal> => {
+const load = <TVal>(options: Partial<EndbOptions<TVal>>): EndbAdapter<TVal> => {
   const validAdapters = Object.keys(adapters);
   let adapter: undefined | keyof typeof adapters;
   if (options.adapter) {
@@ -44,9 +42,9 @@ const load = <TVal>(
   throw new Error(`[endb]: invalid adapter "${adapter}"`);
 };
 
-class Endb<TVal = void> extends EventEmitter {
-  protected readonly options: Endb.EndbOptions<TVal>;
-  constructor(options: string | Partial<Endb.EndbOptions<TVal>> = {}) {
+export class Endb<TVal> extends EventEmitter {
+  protected readonly options: EndbOptions<TVal>;
+  constructor(options: string | Partial<EndbOptions<TVal>> = {}) {
     super();
     const adapterOptions = {
       namespace: 'endb',
@@ -67,7 +65,7 @@ class Endb<TVal = void> extends EventEmitter {
     this.options.store.namespace = this.options.namespace;
   }
 
-  public async all(): Promise<Endb.Element<TVal>[]> {
+  public async all(): Promise<Element<TVal>[]> {
     const { store, deserialize } = this.options;
     const elements = [];
     if (store instanceof Map) {
@@ -169,34 +167,29 @@ class Endb<TVal = void> extends EventEmitter {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
-namespace Endb {
-  type MaybePromise<T> = T | Promise<T>;
+type MaybePromise<T> = T | Promise<T>;
 
-  export interface EndbOptions<TVal, TSerialized = string> {
-    namespace: string;
-    store: EndbAdapter<TVal, TSerialized>;
-    uri?: string;
-    adapter?: keyof typeof adapters;
-    serialize(data: TVal): TSerialized;
-    deserialize(data: TSerialized): TVal;
-  }
-
-  export interface EndbAdapter<TVal, TSerialized = string> {
-    namespace: string;
-    on?(event: 'error', callback: (error: Error) => void | never): void;
-    all?(): MaybePromise<Element<TSerialized>[]>;
-    clear(): MaybePromise<void>;
-    delete(key: string): MaybePromise<boolean>;
-    get(key: string): MaybePromise<void | TVal | TSerialized>;
-    has(key: string): MaybePromise<boolean>;
-    set(key: string, value: TSerialized): MaybePromise<unknown>;
-  }
-
-  export interface Element<T> {
-    key: string;
-    value: T;
-  }
+export interface EndbOptions<TVal, TSerialized = string> {
+  namespace: string;
+  store: EndbAdapter<TVal, TSerialized>;
+  uri?: string;
+  adapter?: keyof typeof adapters;
+  serialize(data: TVal): TSerialized;
+  deserialize(data: TSerialized): TVal;
 }
 
-export = Endb;
+export interface EndbAdapter<TVal, TSerialized = string> {
+  namespace: string;
+  on?(event: 'error', callback: (error: Error) => void | never): void;
+  all?(): MaybePromise<Element<TSerialized>[]>;
+  clear(): MaybePromise<void>;
+  delete(key: string): MaybePromise<boolean>;
+  get(key: string): MaybePromise<void | TVal | TSerialized>;
+  has(key: string): MaybePromise<boolean>;
+  set(key: string, value: TSerialized): MaybePromise<unknown>;
+}
+
+export interface Element<T> {
+  key: string;
+  value: T;
+}

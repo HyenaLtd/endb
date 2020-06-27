@@ -6,7 +6,7 @@ export interface EndbPostgresOptions {
   uri: string;
 }
 
-export default class EndbPostgres<TVal> extends EndbSql
+export default class EndbPostgres<TVal> extends EndbSql<TVal>
   implements EndbAdapter<TVal> {
   public namespace!: string;
   constructor(options: Partial<EndbPostgresOptions> = {}) {

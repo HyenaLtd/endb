@@ -1,10 +1,10 @@
 import { promisify } from 'util';
 import { Database } from 'sqlite3';
-import Endb from 'endb';
+import { Endb } from 'endb';
 import EndbSql from '../src';
 import { clearEach, apiTest, valueTest } from '@endb/test';
 
-class TestSqlite extends EndbSql {
+class TestSqlite<TVal> extends EndbSql<TVal> {
   constructor() {
     super({
       async connect() {

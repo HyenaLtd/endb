@@ -1,7 +1,7 @@
 {
   "name": "@endb/sql",
   "version": "1.1.0",
-  "description": "SQL adapter for Endb.",
+  "description": "SQL adapter for Endb",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -19,9 +19,8 @@
     "sql-ts": "^3.0.1"
   },
   "devDependencies": {
-    "endb": "*",
-    "@endb/test": "*",
-    "@types/node": "12.12.2",
+    "endb": "1.1.0",
+    "@endb/test": "1.1.0",
     "sqlite3": "4.2.0"
   }
 }

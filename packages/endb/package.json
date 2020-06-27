@@ -1,7 +1,7 @@
 {
   "name": "endb",
   "version": "1.1.0",
-  "description": "Key-value storage with support for multiple databases",
+  "description": "Key-value storage for multiple databases",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -20,9 +20,8 @@
     "lodash": "4.17.15"
   },
   "devDependencies": {
-    "@endb/test": "*",
+    "@endb/test": "1.1.0",
     "@types/buffer-json": "^2.0.0",
-    "@types/lodash": "4.14.108",
-    "@types/node": "12.12.2"
+    "@types/lodash": "4.14.157"
   }
 }

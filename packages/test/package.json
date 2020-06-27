@@ -2,7 +2,7 @@
   "name": "@endb/test",
   "private": true,
   "version": "1.1.0",
-  "description": "Helper functions for tests.",
+  "description": "Test suite for Endb",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,8 +15,5 @@
   "author": "chroventer (https://github.com/chroventer)",
   "homepage": "https://endb.js.org",
   "repository": "chroventer/endb",
-  "bugs": "https://github.com/chroventer/endb/issues",
-  "devDependencies": {
-    "endb": "*"
-  }
+  "bugs": "https://github.com/chroventer/endb/issues"
 }
