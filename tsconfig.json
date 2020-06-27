@@ -1,28 +1,14 @@
 {
-  "compilerOptions": {
-    /* Basic Options */
-    "target": "es2019",
-    "module": "commonjs",
-    "declaration": true,
-
-    /* Strict Type-Checking Options */
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-
-    /* Additional Checks */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Module Resolution Options */
-    "moduleResolution": "node",
-    "esModuleInterop": true
-  }
+  "extends": "./tsconfig.json",
+  "files": [],
+  "references": [
+    { "path": "packages/endb" },
+    { "path": "packages/mongo" },
+    { "path": "packages/mysql" },
+    { "path": "packages/postgres" },
+    { "path": "packages/redis" },
+    { "path": "packages/sql" },
+    { "path": "packages/sqlite" },
+    { "path": "packages/test" }
+  ]
 }
