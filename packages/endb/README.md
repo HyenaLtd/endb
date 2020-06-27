@@ -1,6 +1,6 @@
 # `endb`
 
-> Key-value storage with support for multiple databases
+> Key-value storage for multiple databases
 
 ## Usage
 
@@ -9,7 +9,7 @@ const Endb = require('endb');
 
 const endb = new Endb();
 const endb = new Endb({
-    store: new Map(),
-    namespace: 'cache'
+  store: new Map(),
+  namespace: 'cache',
 });
 ```
