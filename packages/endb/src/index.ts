@@ -169,6 +169,7 @@ class Endb<TVal> extends EventEmitter {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-namespace
 namespace Endb {
   type MaybePromise<T> = T | Promise<T>;
 
