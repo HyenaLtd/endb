@@ -7,23 +7,17 @@
     "lint": "eslint --ext .js packages/**",
     "test": "jest --ci --forceExit --runInBand",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
-    "publish": "lerna publish",
     "build:docs": "node docs.js"
   },
   "devDependencies": {
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
     "docma": "^3.2.2",
     "eslint": "^7.2.0",
+    "husky": "^4.2.5",
     "jest": "26.0.1",
-    "lerna": "3.22.1"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "coverage",
-    "testEnvironment": "node",
-    "roots": [
-      "<rootDir>/packages"
-    ],
-    "verbose": true
+    "lerna": "3.22.1",
+    "lint-staged": "^10.2.11"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -35,5 +29,19 @@
     "parserOptions": {
       "ecmaVersion": 2018
     }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "yarn lint --fix"
   }
 }
