@@ -1,0 +1,51 @@
+
+<html><head></head><body><h1 id="endb--"><a href="https://endb.js.org">Endb</a> · <a href="https://github.com/chroventer/endb"><img src="https://github.com/chroventer/endb/workflows/Test/badge.svg" alt="Test" style="max-width: 100%;"></a> <a href="https://codecov.io/gh/chroventer/endb"><img src="https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg" alt="codecov" style="max-width: 100%;"></a> <a href="https://github.com/chroventer/endb/blob/master/LICENSE"><img src="https://badgen.net/github/license/chroventer/endb" alt="License" style="max-width: 100%;"></a></h1>
+<hr />
+<p>Key-value storage for multiple databases</p>
+<ul>
+<li><strong>Easy-to-use</strong>: Endb has a simplistic and neat promise-based API.</li>
+<li><strong>Adapters</strong>: By default, data is cached in memory. The officially supported adapters are covered by many tests to guarantee consistent behavior. They are lightweight, efficient wrappers over various database drivers. Offcially supported adapters are MongoDB, MySQL, PostgreSQL, Redis, and SQLite.</li>
+<li><strong>Third-Party Adapters</strong>: You can optionally use a third-party storage adapters to enable desired functionality.</li>
+<li><strong>Namespaces</strong>: Namespaces isolate elements within the database to avoid key collisions, separate elements by prefixing the keys, and allow clearance of only one namespace while utilizing the same database.</li>
+<li><strong>Custom Serializers</strong>: Endb handles all the JSON data types including Buffer using <a href="https://github.com/jprichardson/buffer-json"><code>buffer-json</code></a>. Optionally, pass your own data serialization methods to support extra data types.</li>
+<li><strong>Embeddable</strong>: Endb is designed to be easily embeddable inside other modules with minimal efforts.</li>
+<li><strong>Data Types</strong>: Handles all the JSON types including <a href="https://nodejs.org/api/buffer.html"><code>Buffer</code></a>.</li>
+<li><strong>Error-Handling</strong>: Database errors are transmitted through; consequently, database errors do not exit or kill the process.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<hr />
+<p><strong>Node.js 12.x or newer is required.</strong></p>
+<pre><code class="shell">npm install endb</code></pre>
+<p>By default, data is stored/cached in memory. Optionally, you can install and use an adapter. Officially supported database adapters are MongoDB, Redis, MySQL, PostgreSQL, and SQLite.</p>
+<pre><code class="shell">npm install @endb/mongo # For MongoDB
+npm install @endb/mysql # For MySQL
+npm install @endb/postgres # For PostgreSQL
+npm install @endb/redis # For Redis
+npm install @endb/sqlite # For SQLite</code></pre>
+<h2 id="usage">Usage</h2>
+<hr />
+<pre><code class="javascript">const Endb = require('endb');
+
+// One of the following
+const endb = new Endb('mongodb://user:pass@localhost:27017/dbname');
+const endb = new Endb('mysql://user:pass@localhost:3306/dbname');
+const endb = new Endb('postgresql://user:pass@localhost:5432/dbname');
+const endb = new Endb('redis://user:pass@localhost:6379');
+const endb = new Endb('sqlite://path/to/database.sqlite');
+
+await endb.set('foo', 'bar'); // true
+await endb.get('foo'); // 'bar'
+await endb.has('foo'); // true
+await endb.all(); // [ { key: 'foo', value: 'bar' } ]
+await endb.delete('foo'); // true
+await endb.clear(); // undefined</code></pre>
+<h2 id="links">Links</h2>
+<hr />
+<ul>
+<li><a href="https://endb.js.org">Documentation</a></li>
+<li><a href="https://github.com/chroventer/endb">GitHub</a></li>
+</ul>
+<h2 id="license">License</h2>
+<hr />
+<p>MIT © chroventer</p>
+</body></html>

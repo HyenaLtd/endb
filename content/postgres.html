@@ -1,0 +1,17 @@
+
+<html><head></head><body><h1 id="-endb-postgres"><code>@endb/postgres</code></h1>
+<hr />
+<blockquote>
+<p>PostgreSQL adapter for Endb</p>
+</blockquote>
+<h2 id="installation">Installation</h2>
+<hr />
+<pre><code class="shell">npm install @endb/postgres</code></pre>
+<h2 id="usage">Usage</h2>
+<hr />
+<pre><code class="javascript">const Endb = require('endb');
+const EndbPostgres = require('@endb/postgres');
+
+const store = new EndbPostgres({ uri: 'postgresql://user:pass@localhost:5432/dbname', table: 'cache' });
+const endb = new Endb({ store });</code></pre>
+</body></html>

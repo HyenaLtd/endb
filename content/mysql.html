@@ -1,0 +1,17 @@
+
+<html><head></head><body><h1 id="-endb-mysql"><code>@endb/mysql</code></h1>
+<hr />
+<blockquote>
+<p>MySQL/MariaDB adapter for Endb</p>
+</blockquote>
+<h2 id="installation">Installation</h2>
+<hr />
+<pre><code class="shell">npm install @endb/mysql</code></pre>
+<h2 id="usage">Usage</h2>
+<hr />
+<pre><code class="javascript">const Endb = require('endb');
+const EndbMysql = require('@endb/mysql');
+
+const store = new EndbMysql({ uri: 'mysql://user:pass@localhost:3306/dbname', table: 'cache' });
+const endb = new Endb({ store });</code></pre>
+</body></html>
