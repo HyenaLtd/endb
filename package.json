@@ -1,5 +1,4 @@
 {
-  "name": "endb",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -18,14 +17,13 @@
     "@types/jest": "^26.0.0",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
     "@typescript-eslint/parser": "^3.3.0",
-    "docma": "^3.2.2",
     "eslint": "^7.2.0",
-    "jest": "26.0.1",
+    "jest": "26.1.0",
     "lerna": "3.22.1",
+    "lint-staged": "^10.2.11",
     "ts-jest": "^26.1.0",
     "typedoc": "^0.17.7",
-    "typescript": "^3.9.5",
-    "lint-staged": "^10.2.11"
+    "typescript": "^3.9.5"
   },
   "eslintConfig": {
     "root": true,
