@@ -1,6 +1,6 @@
 {
   "name": "@endb/postgres",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "description": "PostgreSQL adapter for Endb",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
