@@ -13,10 +13,10 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "endb": "*",
     "mongodb": "3.5.7"
   },
   "devDependencies": {
+    "endb": "*",
     "@endb/test": "*",
     "@types/mongodb": "3.5.20",
     "@types/node": "12.12.2"

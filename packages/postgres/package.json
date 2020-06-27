@@ -17,8 +17,8 @@
     "pg": "8.2.1"
   },
   "devDependencies": {
-    "@endb/test": "*",
     "endb": "*",
+    "@endb/test": "*",
     "@types/pg": "7.4.8"
   }
 }

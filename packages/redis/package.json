@@ -16,8 +16,8 @@
     "redis": "3.0.2"
   },
   "devDependencies": {
-    "@endb/test": "*",
     "endb": "*",
+    "@endb/test": "*",
     "@types/redis": "2.8.6"
   }
 }

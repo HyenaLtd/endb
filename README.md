@@ -1,4 +1,4 @@
-# [Endb](https://endb.js.org) &middot; [![Test](https://github.com/chroventer/endb/workflows/Test/badge.svg)](https://github.com/chroventer/endb) [![codecov](https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/chroventer/endb) [![License](https://badgen.net/github/license/chroventer/endb)](https://github.com/chroventer/endb/blob/master/LICENSE) [![Discord](https://discordapp.com/api/guilds/697425515363172362/embed.png)](https://discord.gg/d5SYmjj)
+# [Endb](https://endb.js.org) &middot; [![Test](https://github.com/chroventer/endb/workflows/Test/badge.svg)](https://github.com/chroventer/endb) [![codecov](https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg)](https://codecov.io/gh/chroventer/endb) [![License](https://badgen.net/github/license/chroventer/endb)](https://github.com/chroventer/endb/blob/master/LICENSE)
 
 Key-value storage for multiple databases
 
@@ -41,7 +41,6 @@ const endb = new Endb('postgresql://user:pass@localhost:5432/dbname');
 const endb = new Endb('redis://user:pass@localhost:6379');
 const endb = new Endb('sqlite://path/to/database.sqlite');
 
-
 await endb.set('foo', 'bar'); // true
 await endb.get('foo'); // 'bar'
 await endb.has('foo'); // true
@@ -49,6 +48,11 @@ await endb.all(); // [ { key: 'foo', value: 'bar' } ]
 await endb.delete('foo'); // true
 await endb.clear(); // undefined
 ```
+
+## Links
+
+- [Documentation](https://endb.js.org)
+- [GitHub](https://github.com/chroventer/endb)
 
 ## License
 
