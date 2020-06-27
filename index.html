@@ -1,30 +1,184 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="default no-js">
 <head>
-    <title>Endb</title>
-    <base href="/endb/">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="generator" content="Docma - https://onury.io/docma">
-
-    <link rel="stylesheet" type="text/css" href="css/docma.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-
-    <script src="//use.fontawesome.com/releases/v5.5.0/js/all.js" defer=""></script>
-    <script src="js/docma-web.js"></script>
-    <script src="//code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="js/highlight.pack.js"></script>
-    <script src="js/tippy.all.min.js"></script>
-    <script src="js/app.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Endb</title>
+	<meta name="description" content="Documentation for Endb">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
-
 <body>
-    <div id="docma-main"></div>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">Endb</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>Endb</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#endb-middot---" id="endb-middot---" style="color: inherit; text-decoration: none;">
+					<h1><a href="https://endb.js.org">Endb</a> &middot; <a href="https://github.com/chroventer/endb"><img src="https://github.com/chroventer/endb/workflows/Test/badge.svg" alt="Test"></a> <a href="https://codecov.io/gh/chroventer/endb"><img src="https://codecov.io/gh/chroventer/endb/branch/master/graph/badge.svg" alt="codecov"></a> <a href="https://github.com/chroventer/endb/blob/master/LICENSE"><img src="https://badgen.net/github/license/chroventer/endb" alt="License"></a></h1>
+				</a>
+				<p>Key-value storage for multiple databases</p>
+				<ul>
+					<li><strong>Easy-to-use</strong>: Endb has a simplistic and neat promise-based API.</li>
+					<li><strong>Adapters</strong>: By default, data is cached in memory. The officially supported adapters are covered by many tests to guarantee consistent behavior. They are lightweight, efficient wrappers over various database drivers. Offcially supported adapters are MongoDB, MySQL, PostgreSQL, Redis, and SQLite.</li>
+					<li><strong>Third-Party Adapters</strong>: You can optionally use a third-party storage adapters to enable desired functionality.</li>
+					<li><strong>Namespaces</strong>: Namespaces isolate elements within the database to avoid key collisions, separate elements by prefixing the keys, and allow clearance of only one namespace while utilizing the same database.</li>
+					<li><strong>Custom Serializers</strong>: Endb handles all the JSON data types including Buffer using <a href="https://github.com/jprichardson/buffer-json"><code>buffer-json</code></a>. Optionally, pass your own data serialization methods to support extra data types.</li>
+					<li><strong>Embeddable</strong>: Endb is designed to be easily embeddable inside other modules with minimal efforts.</li>
+					<li><strong>Data Types</strong>: Handles all the JSON types including <a href="https://nodejs.org/api/buffer.html"><code>Buffer</code></a>.</li>
+					<li><strong>Error-Handling</strong>: Database errors are transmitted through; consequently, database errors do not exit or kill the process.</li>
+				</ul>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<p><strong>Node.js 12.x or newer is required.</strong></p>
+				<pre><code class="language-shell">npm install endb</code></pre>
+				<p>By default, data is stored/cached in memory. Optionally, you can install and use an adapter. Officially supported database adapters are MongoDB, Redis, MySQL, PostgreSQL, and SQLite.</p>
+				<pre><code class="language-shell">npm install @endb/mongo # For MongoDB
+npm install @endb/mysql # For MySQL
+npm install @endb/postgres # For PostgreSQL
+npm install @endb/redis # For Redis
+npm install @endb/sqlite # For SQLite</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> Endb = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;endb&#x27;</span>);
 
+<span class="hljs-comment">// One of the following</span>
+<span class="hljs-keyword">const</span> endb = <span class="hljs-keyword">new</span> Endb(<span class="hljs-string">&#x27;mongodb://user:pass@localhost:27017/dbname&#x27;</span>);
+<span class="hljs-keyword">const</span> endb = <span class="hljs-keyword">new</span> Endb(<span class="hljs-string">&#x27;mysql://user:pass@localhost:3306/dbname&#x27;</span>);
+<span class="hljs-keyword">const</span> endb = <span class="hljs-keyword">new</span> Endb(<span class="hljs-string">&#x27;postgresql://user:pass@localhost:5432/dbname&#x27;</span>);
+<span class="hljs-keyword">const</span> endb = <span class="hljs-keyword">new</span> Endb(<span class="hljs-string">&#x27;redis://user:pass@localhost:6379&#x27;</span>);
+<span class="hljs-keyword">const</span> endb = <span class="hljs-keyword">new</span> Endb(<span class="hljs-string">&#x27;sqlite://path/to/database.sqlite&#x27;</span>);
 
-
-
+<span class="hljs-keyword">await</span> endb.set(<span class="hljs-string">&#x27;foo&#x27;</span>, <span class="hljs-string">&#x27;bar&#x27;</span>); <span class="hljs-comment">// true</span>
+<span class="hljs-keyword">await</span> endb.get(<span class="hljs-string">&#x27;foo&#x27;</span>); <span class="hljs-comment">// &#x27;bar&#x27;</span>
+<span class="hljs-keyword">await</span> endb.has(<span class="hljs-string">&#x27;foo&#x27;</span>); <span class="hljs-comment">// true</span>
+<span class="hljs-keyword">await</span> endb.all(); <span class="hljs-comment">// [ { key: &#x27;foo&#x27;, value: &#x27;bar&#x27; } ]</span>
+<span class="hljs-keyword">await</span> endb.delete(<span class="hljs-string">&#x27;foo&#x27;</span>); <span class="hljs-comment">// true</span>
+<span class="hljs-keyword">await</span> endb.clear(); <span class="hljs-comment">// undefined</span></code></pre>
+				<a href="#links" id="links" style="color: inherit; text-decoration: none;">
+					<h2>Links</h2>
+				</a>
+				<ul>
+					<li><a href="https://endb.js.org">Documentation</a></li>
+					<li><a href="https://github.com/chroventer/endb">GitHub</a></li>
+				</ul>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>MIT © chroventer</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_endb_src_index_.html">&quot;endb/src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_mongo_src_index_.html">&quot;mongo/src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_mysql_src_index_.html">&quot;mysql/src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_postgres_src_index_.html">&quot;postgres/src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_redis_src_index_.html">&quot;redis/src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_sql_src_index_.html">&quot;sql/src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_sqlite_src_index_.html">&quot;sqlite/src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_test_src_index_.html">&quot;test/src/index&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
