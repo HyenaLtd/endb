@@ -1,12 +1,15 @@
 {
   "name": "endb",
   "version": "1.1.0",
-  "description": "Key-value storage with support for multiple databases",
-  "main": "src/index.js",
-  "typings": "typings/index.d.ts",
+  "description": "Key-value storage for multiple databases",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "src"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "license": "MIT",
   "author": "chroventer (https://github.com/chroventer)",
   "homepage": "https://endb.js.org",
@@ -17,6 +20,8 @@
     "lodash": "4.17.15"
   },
   "devDependencies": {
-    "@endb/test": "^1.1.0"
+    "@endb/test": "1.1.0",
+    "@types/buffer-json": "^2.0.0",
+    "@types/lodash": "4.14.157"
   }
 }

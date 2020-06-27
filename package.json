@@ -4,44 +4,41 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .js packages/**",
+    "lint": "eslint --ext .js,.ts packages/**/src",
     "test": "jest --ci --forceExit --runInBand",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
-    "build:docs": "node docs.js"
+    "build": "wsrun --stages build",
+    "build:docs": "typedoc"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
-    "docma": "^3.2.2",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.14",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "eslint": "^7.2.0",
-    "husky": "^4.2.5",
-    "jest": "26.0.1",
-    "lerna": "3.22.1",
-    "lint-staged": "^10.2.11"
+    "jest": "26.1.0",
+    "lint-staged": "^10.2.11",
+    "ts-jest": "^26.1.0",
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.5",
+    "wsrun": "^5.2.1"
   },
   "eslintConfig": {
-    "extends": "eslint:recommended",
-    "env": {
-      "es6": true,
-      "node": true,
-      "jest": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2018
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "commitlint": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
     "extends": [
-      "@commitlint/config-conventional"
-    ]
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+      "project": "tsconfig.json"
+    },
+    "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
   },
-  "lint-staged": {
-    "*.js": "yarn lint --fix"
-  }
+  "name": "endb"
 }

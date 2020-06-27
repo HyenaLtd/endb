@@ -28,3 +28,7 @@ yarn.lock
 
 # Documentation
 docs/
+
+# Build
+dist/
+tsconfig.tsbuildinfo

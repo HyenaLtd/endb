@@ -1,35 +1,28 @@
-"use strict";
+import { Element, EndbAdapter } from 'endb';
+import { EventEmitter } from 'events';
+import { Collection, MongoClient } from 'mongodb';
 
-const EventEmitter = require("events");
-const mongodb = require("mongodb");
+export interface EndbMongoOptions {
+  uri: string;
+  collection: string;
+}
 
-/**
- * EndbMongo
- * @extends EventEmitter
- */
-class EndbMongo extends EventEmitter {
-  /**
-   * @typedef {Object} EndbMongoOptions
-   * @property {string} [uri] The connection URI
-   * @property {string} [collection='endb'] The collection
-   */
-
-  /**
-   * Creates a new EndbMongo instance
-   * @param {EndbMongoOptions} [options={}]
-   */
-  constructor(options = {}) {
+export default class EndbMongo<TVal = void> extends EventEmitter
+  implements EndbAdapter<TVal> {
+  public namespace!: string;
+  protected db: Promise<Collection<Element<string>>>;
+  constructor(options: Partial<EndbMongoOptions> = {}) {
     super();
-    const { uri = "mongodb://127.0.0.1:27017", collection = "endb" } = options;
+    const { uri = 'mongodb://127.0.0.1:27017', collection = 'endb' } = options;
     this.db = new Promise((resolve) => {
-      mongodb.MongoClient.connect(uri, (error, client) => {
+      MongoClient.connect(uri, (error, client) => {
         if (error !== null) {
-          return this.emit("error", error);
+          return this.emit('error', error);
         }
 
         const db = client.db();
         const coll = db.collection(collection);
-        db.on("error", (error) => this.emit("error", error));
+        db.on('error', (error) => this.emit('error', error));
         coll.createIndex(
           { key: 1 },
           {
@@ -42,40 +35,38 @@ class EndbMongo extends EventEmitter {
     });
   }
 
-  async all() {
+  public async all(): Promise<Element<string>[]> {
     const collection = await this.db;
     return collection
       .find({ key: new RegExp(`^${this.namespace}:`) })
       .toArray();
   }
 
-  async clear() {
+  public async clear(): Promise<void> {
     const collection = await this.db;
     await collection.deleteMany({ key: new RegExp(`^${this.namespace}:`) });
   }
 
-  async delete(key) {
+  public async delete(key: string): Promise<boolean> {
     const collection = await this.db;
     const { deletedCount } = await collection.deleteOne({ key });
     return deletedCount !== undefined && deletedCount > 0;
   }
 
-  async get(key) {
+  public async get(key: string): Promise<void | string> {
     const collection = await this.db;
     const doc = await collection.findOne({ key });
     return doc === null ? undefined : doc.value;
   }
 
-  async has(key) {
+  public async has(key: string): Promise<boolean> {
     const collection = await this.db;
     const doc = await collection.findOne({ key });
     return Boolean(doc);
   }
 
-  async set(key, value) {
+  public async set(key: string, value: string): Promise<unknown> {
     const collection = await this.db;
     return collection.replaceOne({ key }, { key, value }, { upsert: true });
   }
 }
-
-module.exports = EndbMongo;
