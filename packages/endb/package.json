@@ -20,7 +20,7 @@
     "lodash": "4.17.15"
   },
   "devDependencies": {
-    "@endb/test": "1.1.0",
+    "@endb/test": "*",
     "@types/buffer-json": "^2.0.0",
     "@types/lodash": "4.14.157"
   }

@@ -17,11 +17,11 @@
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
     "sqlite3": "4.2.0",
-    "@endb/sql": "1.1.0"
+    "@endb/sql": "*"
   },
   "devDependencies": {
-    "endb": "1.1.0",
-    "@endb/test": "1.1.0",
+    "endb": "*",
+    "@endb/test": "*",
     "@types/sqlite3": "3.1.6"
   }
 }

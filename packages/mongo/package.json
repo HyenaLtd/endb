@@ -19,8 +19,8 @@
     "mongodb": "3.5.9"
   },
   "devDependencies": {
-    "endb": "1.1.0",
-    "@endb/test": "1.1.0",
+    "endb": "*",
+    "@endb/test": "*",
     "@types/mongodb": "3.5.25"
   }
 }
