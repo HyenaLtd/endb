@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "composite": true,
     /* Basic Options */
     "target": "es2019",
     "module": "commonjs",
