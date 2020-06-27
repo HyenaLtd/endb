@@ -7,5 +7,14 @@
     "moduleResolution": "node",
     "esModuleInterop": true
   },
-  "exclude": ["**/__tests__", "**/node_modules", "**/dist"]
+  "exclude": ["**/__tests__", "**/node_modules", "**/dist"],
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "./docs",
+    "theme": "default",
+    "name": "Endb",
+    "json": "./docs/docs.json",
+    "readme": "README.md",
+    "hideGenerator": true
+  }
 }

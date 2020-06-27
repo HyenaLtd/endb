@@ -7,7 +7,8 @@
     "lint": "eslint --ext .js,.ts packages/**/src",
     "test": "jest --ci --forceExit --runInBand",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
-    "build": "wsrun --stages build"
+    "build": "wsrun --stages build",
+    "build:docs": "typedoc"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
@@ -20,6 +21,7 @@
     "jest": "26.1.0",
     "lint-staged": "^10.2.11",
     "ts-jest": "^26.1.0",
+    "typedoc": "^0.17.7",
     "typescript": "^3.9.5",
     "wsrun": "^5.2.1"
   },
