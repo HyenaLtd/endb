@@ -1,4 +1,4 @@
-import Endb from 'endb';
+import { Endb } from 'endb';
 import EndbRedis from '../src';
 import { clearEach, apiTest, adapterTest, valueTest } from '@endb/test';
 

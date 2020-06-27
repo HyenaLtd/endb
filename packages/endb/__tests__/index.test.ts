@@ -1,4 +1,4 @@
-import Endb from '../src';
+import { Endb } from '../src';
 import { apiTest, valueTest, clearEach } from '@endb/test';
 
 describe('endb', () => {
