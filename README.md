@@ -49,10 +49,13 @@ await endb.delete('foo'); // true
 await endb.clear(); // undefined
 ```
 
-## Links
+## Documentation
 
-- [Documentation](https://endb.js.org)
-- [GitHub](https://github.com/chroventer/endb)
+You can find the Endb documentation [on this website](https://endb.js.org)
+
+## Contributing
+
+Before submitting a pull-request, please read our [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
