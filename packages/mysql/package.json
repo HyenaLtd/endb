@@ -22,5 +22,11 @@
   "devDependencies": {
     "@endb/test": "*",
     "endb": "*"
-  }
+  },
+  "keywords": [
+    "endb",
+    "key-value",
+    "cache",
+    "mysql"
+  ]
 }

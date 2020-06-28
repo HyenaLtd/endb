@@ -22,5 +22,11 @@
     "endb": "*",
     "@endb/test": "*",
     "@types/redis": "2.8.22"
-  }
+  },
+  "keywords": [
+    "endb",
+    "key-value",
+    "cache",
+    "redis"
+  ]
 }

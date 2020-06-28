@@ -23,5 +23,15 @@
     "@endb/test": "*",
     "@types/buffer-json": "^2.0.0",
     "@types/lodash": "4.14.157"
-  }
+  },
+  "keywords": [
+    "endb",
+    "key-value",
+    "cache",
+    "mongodb",
+    "mysql",
+    "postgresql",
+    "redis",
+    "sqlite"
+  ]
 }

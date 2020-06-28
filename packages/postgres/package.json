@@ -23,5 +23,11 @@
     "endb": "*",
     "@endb/test": "*",
     "@types/pg": "7.14.3"
-  }
+  },
+  "keywords": [
+    "endb",
+    "key-value",
+    "cache",
+    "postgres"
+  ]
 }

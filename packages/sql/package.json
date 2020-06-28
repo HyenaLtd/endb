@@ -22,5 +22,11 @@
     "endb": "*",
     "@endb/test": "*",
     "sqlite3": "4.2.0"
-  }
+  },
+  "keywords": [
+    "endb",
+    "key-value",
+    "cache",
+    "sql"
+  ]
 }
