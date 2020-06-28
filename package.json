@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .js,.ts packages/**/src",
+    "lint": "eslint --ext .js,.ts packages/*/src",
     "test": "jest --ci --forceExit --noStackTrace --runInBand",
     "test:docker": "docker-compose up --build --abort-on-container-exit --exit-code-from test",
     "build": "lerna run build",
@@ -30,8 +30,10 @@
     "wsrun": "^5.2.1"
   },
   "eslintConfig": {
-    "root": true,
     "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
     "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended"
