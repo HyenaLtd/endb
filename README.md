@@ -55,7 +55,7 @@ You can find the Endb documentation [on this website](https://endb.js.org)
 
 ## Contributing
 
-Before submitting a pull-request, please read our [Contributing Guide](CONTRIBUTING.md).
+Before submitting a pull-request, please read our [Contributing Guide](./.github/CONTRIBUTING.md).
 
 ## License
 
