@@ -7,10 +7,10 @@ export interface EndbMongoOptions {
   collection: string;
 }
 
-export default class EndbMongo<TVal = void> extends EventEmitter
+export default class EndbMongo<TVal> extends EventEmitter
   implements EndbAdapter<TVal> {
   public namespace!: string;
-  protected db: Promise<Collection<Element<string>>>;
+  protected readonly db: Promise<Collection<Element<string>>>;
   constructor(options: Partial<EndbMongoOptions> = {}) {
     super();
     const { uri = 'mongodb://127.0.0.1:27017', collection = 'endb' } = options;

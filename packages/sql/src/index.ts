@@ -14,22 +14,23 @@ export interface EndbSqlOptions {
 export default abstract class EndbSql<TVal> extends EventEmitter
   implements EndbAdapter<TVal> {
   public namespace!: string;
-  public readonly dialect: SQLDialects;
+  protected readonly options: Required<EndbSqlOptions>;
   protected readonly db: TableWithColumns<Element<string>>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected readonly query: (sqlString: string) => Promise<any>;
   constructor(options: EndbSqlOptions) {
     super();
-    const { table = 'endb', keySize = 255 } = options;
-    const db = new Sql(options.dialect);
-    this.dialect = options.dialect;
+    this.options = {
+      table: 'endb', keySize: 255, ...options
+    }
+    const db = new Sql(this.options.dialect);
     this.db = db.define<Element<string>>({
-      name: table,
+      name: this.options.table,
       columns: [
         {
           name: 'key',
           primaryKey: true,
-          dataType: `VARCHAR(${Number(keySize)})`,
+          dataType: `VARCHAR(${Number(this.options.keySize)})`,
         },
         {
           name: 'value',
@@ -94,11 +95,11 @@ export default abstract class EndbSql<TVal> extends EventEmitter
 
   public async set(key: string, value: string): Promise<unknown> {
     let upsert;
-    if (this.dialect === 'mysql') {
+    if (this.options.dialect === 'mysql') {
       value = value.replace(/\\/g, '\\\\');
     }
 
-    if (this.dialect === 'postgres') {
+    if (this.options.dialect === 'postgres') {
       upsert = this.db
         .insert({ key, value })
         .onConflict({

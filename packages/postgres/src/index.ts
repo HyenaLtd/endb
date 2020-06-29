@@ -3,13 +3,14 @@ import { EndbAdapter } from 'endb';
 import { Pool } from 'pg';
 
 export interface EndbPostgresOptions {
-  uri: string;
+  uri?: string;
+  table?: string;
+  keySize?: number;
 }
 
 export default class EndbPostgres<TVal> extends EndbSql<TVal>
   implements EndbAdapter<TVal> {
-  public namespace!: string;
-  constructor(options: Partial<EndbPostgresOptions> = {}) {
+  constructor(options: EndbPostgresOptions = {}) {
     const { uri = 'postgresql://localhost:5432' } = options;
     super({
       dialect: 'postgres',

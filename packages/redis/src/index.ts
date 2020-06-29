@@ -4,7 +4,7 @@ import { ClientOpts, createClient } from 'redis';
 import { promisify } from 'util';
 
 export interface EndbRedisOptions extends ClientOpts {
-  uri: string;
+  uri?: string;
 }
 
 interface Client {
@@ -22,14 +22,14 @@ export default class EndbRedis<TVal> extends EventEmitter
   implements EndbAdapter<TVal> {
   public namespace!: string;
   private readonly db: Client;
-  constructor(options: Partial<EndbRedisOptions> = {}) {
+  constructor(options: EndbRedisOptions = {}) {
     super();
     if (options.uri && typeof options.url === 'undefined') {
       options.url = options.uri;
     }
 
     const client = createClient(options);
-    const methods: (keyof Client)[] = [
+    const methods: Array<keyof Client> = [
       'get',
       'set',
       'sadd',

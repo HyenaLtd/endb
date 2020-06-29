@@ -4,16 +4,15 @@ import { Database } from 'sqlite3';
 import { promisify } from 'util';
 
 export interface EndbSqliteOptions {
-  uri: string;
-  table: string;
-  keySize: number;
-  busyTimeout: number;
+  uri?: string;
+  table?: string;
+  keySize?: number;
+  busyTimeout?: number;
 }
 
 export default class EndbSqlite<TVal> extends EndbSql<TVal>
   implements EndbAdapter<TVal> {
-  public namespace!: string;
-  constructor(options: Partial<EndbSqliteOptions> = {}) {
+  constructor(options: EndbSqliteOptions = {}) {
     const { uri = 'sqlite://:memory:' } = options;
     super({
       dialect: 'sqlite',

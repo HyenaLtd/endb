@@ -3,15 +3,14 @@ import { EndbAdapter } from 'endb';
 import mysql2 from 'mysql2/promise';
 
 export interface EndbMysqlOptions {
-  uri: string;
-  table: string;
-  keySize: number;
+  uri?: string;
+  table?: string;
+  keySize?: number;
 }
 
-export default class EndbMysql<TVal = void> extends EndbSql<TVal>
+export default class EndbMysql<TVal> extends EndbSql<TVal>
   implements EndbAdapter<TVal> {
-  public namespace!: string;
-  constructor(options: Partial<EndbMysqlOptions> = {}) {
+  constructor(options: EndbMysqlOptions = {}) {
     const { uri = 'mysql://localhost' } = options;
     super({
       dialect: 'mysql',
