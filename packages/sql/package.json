@@ -19,8 +19,8 @@
     "sql-ts": "^3.0.1"
   },
   "devDependencies": {
-    "@endb/test": "^1.3.0",
-    "endb": "^1.3.0",
+    "@endb/test": "*",
+    "endb": "*",
     "sqlite3": "4.2.0"
   },
   "keywords": [

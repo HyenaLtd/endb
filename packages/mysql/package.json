@@ -16,12 +16,12 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "@endb/sql": "^1.3.0",
+    "@endb/sql": "*",
     "mysql2": "2.1.0"
   },
   "devDependencies": {
-    "@endb/test": "^1.3.0",
-    "endb": "^1.3.0"
+    "@endb/test": "*",
+    "endb": "*"
   },
   "keywords": [
     "endb",

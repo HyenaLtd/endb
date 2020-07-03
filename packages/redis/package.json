@@ -19,9 +19,9 @@
     "redis": "3.0.2"
   },
   "devDependencies": {
-    "@endb/test": "^1.3.0",
+    "@endb/test": "*",
     "@types/redis": "2.8.22",
-    "endb": "^1.3.0"
+    "endb": "*"
   },
   "keywords": [
     "endb",

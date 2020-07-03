@@ -20,9 +20,9 @@
     "pg": "8.2.1"
   },
   "devDependencies": {
-    "@endb/test": "^1.3.0",
+    "@endb/test": "*",
     "@types/pg": "7.14.3",
-    "endb": "^1.3.0"
+    "endb": "*"
   },
   "keywords": [
     "endb",
