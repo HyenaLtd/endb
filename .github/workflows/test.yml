@@ -9,26 +9,3 @@ jobs:
         run: yarn test:docker
       - name: Upload coverage
         uses: codecov/codecov-action@v1
-        with:
-          flags:
-            endb:
-              paths: 
-                - packages/endb/src
-            mongo:
-              paths:
-                - packages/mongo/src
-            mysql:
-              paths:
-                - packages/mysql/src
-            postgres:
-              paths:
-                - packages/postgres/src
-            redis:
-              paths:
-                - packages/redis/src
-            sql:
-              paths:
-                - packages/sql/src
-            sqlite:
-              paths:
-                - packages/sqlite/src
