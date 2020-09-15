@@ -1,11 +1,9 @@
-import { default as EndbClass } from 'endb';
-
 export const clearEach = async (Endb: any, options = {}): Promise<void> => {
   const endb = new Endb(options);
   await endb.clear();
 };
 
-export const apiTest = (test: jest.It, Endb: any | typeof EndbClass, options = {}): void => {
+export const apiTest = (test: jest.It, Endb: any, options = {}): void => {
   test('methods return a Promise', () => {
     const endb = new Endb(options);
     console.log(endb.options.store);
