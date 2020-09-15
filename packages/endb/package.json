@@ -16,13 +16,13 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "buffer-json": "2.0.0",
-    "lodash": "4.17.19"
+    "buffer-json": "^2.0.0",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "@endb/test": "*",
     "@types/buffer-json": "^2.0.0",
-    "@types/lodash": "4.14.157"
+    "@types/lodash": "^4.14.161"
   },
   "keywords": [
     "endb",
