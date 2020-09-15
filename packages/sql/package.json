@@ -16,12 +16,12 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "sql-ts": "^3.0.1"
+    "sql-ts": "^4.1.1"
   },
   "devDependencies": {
     "@endb/test": "*",
     "endb": "*",
-    "sqlite3": "4.2.0"
+    "sqlite3": "5.0.0"
   },
   "keywords": [
     "endb",
