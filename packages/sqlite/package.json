@@ -16,7 +16,7 @@
   "repository": "chroventer/endb",
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
-    "@endb/sql": "^1.4.0",
+    "@endb/sql": "latest",
     "sqlite3": "5.0.0"
   },
   "devDependencies": {
