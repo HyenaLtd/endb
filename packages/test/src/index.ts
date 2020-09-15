@@ -1,11 +1,14 @@
+import { default as EndbClass } from 'endb';
+
 export const clearEach = async (Endb: any, options = {}): Promise<void> => {
   const endb = new Endb(options);
   await endb.clear();
 };
 
-export const apiTest = (test: jest.It, Endb: any, options = {}): void => {
+export const apiTest = (test: jest.It, Endb: any | typeof EndbClass, options = {}): void => {
   test('methods return a Promise', () => {
     const endb = new Endb(options);
+    console.log(endb.options.store);
     expect(endb.all()).toBeInstanceOf(Promise);
     expect(endb.clear()).toBeInstanceOf(Promise);
     expect(endb.delete('foo')).toBeInstanceOf(Promise);
@@ -19,6 +22,7 @@ export const apiTest = (test: jest.It, Endb: any, options = {}): void => {
 
   test('.all() resolves to an array', async () => {
     const endb = new Endb(options);
+    console.log(endb.options)
     await endb.set('foo', 'bar');
     expect(await endb.all()).toContainEqual({ key: 'foo', value: 'bar' });
   });

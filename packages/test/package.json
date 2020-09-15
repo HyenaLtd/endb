@@ -15,5 +15,8 @@
   "author": "chroventer (https://github.com/chroventer)",
   "homepage": "https://endb.js.org",
   "repository": "chroventer/endb",
-  "bugs": "https://github.com/chroventer/endb/issues"
+  "bugs": "https://github.com/chroventer/endb/issues",
+  "devDependencies": {
+    "endb": "*"
+  }
 }
