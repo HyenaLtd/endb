@@ -1,8 +1,8 @@
 import { Element, EndbAdapter } from 'endb';
 import { EventEmitter } from 'events';
 import { Sql } from 'sql-ts';
-import { SQLDialects } from 'sql-ts/dist/configTypes';
-import { TableWithColumns } from 'sql-ts/dist/table';
+import { SQLDialects } from 'sql-ts/dist/esm/configTypes';
+import { TableWithColumns } from 'sql-ts/dist/esm/table';
 
 export interface EndbSqlOptions {
   dialect: SQLDialects;
