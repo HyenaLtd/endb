@@ -91,7 +91,6 @@ export const apiTest = (test: jest.It, Endb: any, options = {}): void => {
 
   test('.set(key, value) sets a value', async () => {
     const endb = new Endb(options);
-    console.log(endb.options.store);
     await endb.set('foo', 'bar');
     expect(await endb.get('foo')).toBe('bar');
   });
