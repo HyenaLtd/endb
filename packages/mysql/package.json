@@ -17,7 +17,7 @@
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
     "@endb/sql": "latest",
-    "mysql2": "2.1.0"
+    "mysql2": "^2.1.0"
   },
   "devDependencies": {
     "@endb/test": "*",

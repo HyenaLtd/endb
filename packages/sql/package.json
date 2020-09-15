@@ -21,7 +21,7 @@
   "devDependencies": {
     "@endb/test": "*",
     "endb": "*",
-    "sqlite3": "5.0.0"
+    "sqlite3": "^5.0.0"
   },
   "keywords": [
     "endb",

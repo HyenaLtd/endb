@@ -17,11 +17,11 @@
   "bugs": "https://github.com/chroventer/endb/issues",
   "dependencies": {
     "@endb/sql": "latest",
-    "pg": "8.3.3"
+    "pg": "^8.3.3"
   },
   "devDependencies": {
     "@endb/test": "*",
-    "@types/pg": "7.14.4",
+    "@types/pg": "^7.14.4",
     "endb": "*"
   },
   "keywords": [
