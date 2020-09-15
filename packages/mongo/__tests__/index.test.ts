@@ -18,7 +18,8 @@ describe('@endb/mongo', () => {
   });
 
   describe('adapter', () => {
-    adapterTest(test, Endb, uri, 'mongodb://127.0.0.1:1234');
+    const badUri = 'mongodb://127.0.0.1:1234';
+    adapterTest(test, Endb, uri, badUri);
   });
 
   afterEach(() => clearEach(Endb, { store }));

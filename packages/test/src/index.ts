@@ -162,8 +162,8 @@ export const valueTest = (test: jest.It, Endb: any, options = {}): void => {
 export const adapterTest = (
   test: jest.It,
   Endb: any,
-  goodUri = '',
-  badUri = ''
+  goodUri: string,
+  badUri: string
 ): void => {
   test('infers the adapter from the URI', async () => {
     const endb = new Endb(goodUri);

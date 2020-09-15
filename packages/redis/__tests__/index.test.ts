@@ -18,7 +18,8 @@ describe('@endb/redis', () => {
   });
 
   describe('adapter', () => {
-    adapterTest(test, Endb, uri, 'redis://foo');
+    const badUri = 'redis://foo';
+    adapterTest(test, Endb, uri, badUri);
   });
 
   afterEach(() => clearEach(Endb, { store }));

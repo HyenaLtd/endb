@@ -25,7 +25,8 @@ describe('@endb/mysql', () => {
   });
 
   describe('adapter', () => {
-    adapterTest(test, Endb, uri, 'mysql://foo');
+    const badUri = 'mysql://foo';
+    adapterTest(test, Endb, uri, badUri);
   });
 
   afterEach(() => clearEach(Endb, { store }));

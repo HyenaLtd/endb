@@ -57,7 +57,7 @@ class Endb<TVal> extends EventEmitter {
 
     this.options = {
       ...adapterOptions,
-      store: adapterOptions.store || load(adapterOptions),
+      store: adapterOptions.store ?? load(adapterOptions),
     };
 
     if (typeof this.options.store.on === 'function') {

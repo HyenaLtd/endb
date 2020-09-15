@@ -26,7 +26,8 @@ describe('@endb/postgres', () => {
   });
 
   describe('adapter', () => {
-    adapterTest(test, Endb, uri, 'postgresql://foo');
+    const badUri = 'postgresql://foo';
+    adapterTest(test, Endb, uri, badUri);
   });
 
   afterEach(() => clearEach(Endb, { store }));

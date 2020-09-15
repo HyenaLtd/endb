@@ -1,6 +1,6 @@
+import { adapterTest, apiTest, clearEach, valueTest } from '@endb/test';
 import Endb from 'endb';
 import EndbSqlite from '../src';
-import { clearEach, apiTest, adapterTest, valueTest } from '@endb/test';
 
 const uri = 'sqlite://test.sqlite';
 const store = new EndbSqlite({
@@ -20,7 +20,8 @@ describe('@endb/sqlite', () => {
   });
 
   describe('adapter', () => {
-    adapterTest(test, Endb, uri, 'sqlite://non/existent/database.sqlite');
+    const badUri = 'sqlite://non/existent/database.sqlite';
+    adapterTest(test, Endb, uri, badUri);
   });
 
   afterEach(() => clearEach(Endb, { store }));
