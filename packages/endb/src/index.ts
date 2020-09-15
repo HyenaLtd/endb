@@ -37,7 +37,7 @@ const load = <TVal>(
 
   if (validAdapters.includes(adapter)) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const Adapter = require(adapters[adapter]()).default;
+    const Adapter = adapters[adapter]().default;
     return new Adapter(options);
   }
 
