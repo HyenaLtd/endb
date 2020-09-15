@@ -6,13 +6,13 @@ import _set from 'lodash/set';
 import _unset from 'lodash/unset';
 
 const adapters = {
-  mongo: '@endb/mongo',
-  mongodb: '@endb/mongo',
-  mysql: '@endb/mysql',
-  postgres: '@endb/postgres',
-  postgresql: '@endb/postgres',
-  redis: '@endb/redis',
-  sqlite: '@endb/sqlite',
+  mongo: () => require('@endb/mongo'),
+  mongodb: () => require('@endb/mongo'),
+  mysql: () => require('@endb/mysql'),
+  postgres: () => require('@endb/postgres'),
+  postgresql: () => require('@endb/postgres'),
+  redis: () => require('@endb/redis'),
+  sqlite: () => require('@endb/sqlite'),
 };
 
 const load = <TVal>(
@@ -37,7 +37,7 @@ const load = <TVal>(
 
   if (validAdapters.includes(adapter)) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const Adapter = require(adapters[adapter]).default;
+    const Adapter = adapters[adapter]().default;
     return new Adapter(options);
   }
 

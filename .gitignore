@@ -32,3 +32,6 @@ docs/
 # Build
 dist/
 tsconfig.tsbuildinfo
+
+# Visual Studio Code
+.vscode/
