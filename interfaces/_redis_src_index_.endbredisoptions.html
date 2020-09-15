@@ -93,6 +93,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_redis_src_index_.endbredisoptions.html#connect_timeout" class="tsd-kind-icon">connect_<wbr>timeout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_redis_src_index_.endbredisoptions.html#db" class="tsd-kind-icon">db</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_redis_src_index_.endbredisoptions.html#detect_buffers" class="tsd-kind-icon">detect_<wbr>buffers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_redis_src_index_.endbredisoptions.html#disable_resubscribing" class="tsd-kind-icon">disable_<wbr>resubscribing</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_redis_src_index_.endbredisoptions.html#enable_offline_queue" class="tsd-kind-icon">enable_<wbr>offline_<wbr>queue</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_redis_src_index_.endbredisoptions.html#family" class="tsd-kind-icon">family</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_redis_src_index_.endbredisoptions.html#host" class="tsd-kind-icon">host</a></li>
@@ -128,7 +129,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#auth_pass">auth_pass</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:32</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:129</li>
 						</ul>
 					</aside>
 				</section>
@@ -139,7 +140,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#connect_timeout">connect_timeout</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:29</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:119</li>
 						</ul>
 					</aside>
 				</section>
@@ -150,9 +151,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#db">db</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:34</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:141</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set, client will run Redis <strong>select</strong> command on connect.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="detect_buffers" class="tsd-anchor"></a>
@@ -161,9 +172,43 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#detect_buffers">detect_buffers</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:23</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:86</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to <code>true</code>, then replies will be sent to callbacks as Buffers.
+								This option lets you switch between Buffers and Strings on a per-command basis,
+								whereas <code>return_buffers</code> applies to every command on a client.<br><strong>Note</strong>: This doesn&#39;t work properly with the pubsub mode.
+							A subscriber has to either always return Strings or Buffers.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="disable_resubscribing" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> disable_<wbr>resubscribing</h3>
+					<div class="tsd-signature tsd-kind-icon">disable_<wbr>resubscribing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#disable_resubscribing">disable_resubscribing</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/redis/index.d.ts:154</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to <code>true</code>, a client won&#39;t resubscribe after disconnecting.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="enable_offline_queue" class="tsd-anchor"></a>
@@ -172,9 +217,23 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#enable_offline_queue">enable_offline_queue</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:27</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:117</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>By default, if there is no active connection to the Redis server,
+								commands are added to a queue and are executed once the connection has been established.
+								Setting <code>enable_offline_queue</code> to <code>false</code> will disable this feature
+								and the callback will be executed immediately with an error,
+							or an error will be emitted if no callback is specified.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>true</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="family" class="tsd-anchor"></a>
@@ -183,9 +242,24 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#family">family</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:35</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:149</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>You can force using IPv6 if you set the family to <strong>IPv6</strong>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p>Node.js <a href="https://nodejs.org/api/net.html">net</a>
+									or <a href="https://nodejs.org/api/dns.html">dns</a>
+								modules on how to use the family type.</p>
+							</dd>
+							<dt>default</dt>
+							<dd><p>IPv4</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="host" class="tsd-anchor"></a>
@@ -194,9 +268,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#host">host</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:16</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:44</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>IP address of the Redis server.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>127.0.0.1</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="max_attempts" class="tsd-anchor"></a>
@@ -205,7 +289,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#max_attempts">max_attempts</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:30</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:120</li>
 						</ul>
 					</aside>
 				</section>
@@ -216,9 +300,25 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#no_ready_check">no_ready_check</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:26</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:108</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>When a connection is established to the Redis server,
+								the server might still be loading the database from disk.
+								While loading, the server will not respond to any commands.
+								To work around this, Node Redis has a &quot;ready check&quot; which sends the <strong>INFO</strong> command to the server.
+								The response from the <strong>INFO</strong> command indicates whether the server is ready for more commands.
+								When ready, <strong>node_redis</strong> emits a <strong>ready</strong> event.
+							Setting <code>no_ready_check</code> to <code>true</code> will inhibit this check.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="parser" class="tsd-anchor"></a>
@@ -227,7 +327,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#parser">parser</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:20</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -238,9 +338,20 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#password">password</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:33</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:136</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set, client will run Redis auth command on connect.
+							Alias <code>auth_pass</code>.<br><strong>Note</strong>: Node Redis &lt; 2.5 must use <code>auth_pass</code>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="path" class="tsd-anchor"></a>
@@ -249,9 +360,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#path">path</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:18</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:54</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The UNIX socket string of the Redis server.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="port" class="tsd-anchor"></a>
@@ -260,9 +381,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#port">port</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:17</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:49</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Port of the Redis server.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>6379</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="prefix" class="tsd-anchor"></a>
@@ -271,9 +402,22 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#prefix">prefix</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:38</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:178</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A string used to prefix all used keys (e.g. namespace:test).
+								Please be aware that the <strong>keys</strong> command will not be prefixed.
+								The <strong>keys</strong> command has a &quot;pattern&quot; as argument and no key
+							and it would be impossible to determine the existing keys in Redis if this would be prefixed.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="rename_commands" class="tsd-anchor"></a>
@@ -282,9 +426,24 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#rename_commands">rename_commands</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:36</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:162</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Passing an object with renamed commands to use instead of the original functions.
+								For example, if you renamed the command <strong>KEYS</strong> to &quot;DO-NOT-USE&quot;
+							then the <code>rename_commands</code> object would be: { KEYS : &quot;DO-NOT-USE&quot; }.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p>the <a href="http://redis.io/topics/security">Redis security topics</a> for more info.</p>
+							</dd>
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="retry_max_delay" class="tsd-anchor"></a>
@@ -293,7 +452,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#retry_max_delay">retry_max_delay</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:28</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:118</li>
 						</ul>
 					</aside>
 				</section>
@@ -304,9 +463,50 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#retry_strategy">retry_strategy</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:39</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:211</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A function that receives an options object as parameter including the retry <code>attempt</code>,
+								the <code>total_retry_time</code> indicating how much time passed since the last time connected,
+								the <strong>error</strong> why the connection was lost and the number of <code>times_connected</code> in total.
+								If you return a number from this function, the retry will happen after that time in milliseconds.
+								If you return a non-number, no further retry will happen
+								and all offline commands are flushed with errors.
+							Return an error to return that specific error to all offline commands.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>function</p>
+							</dd>
+							<dt>see</dt>
+							<dd><p>interface <code>RetryStrategyOptions</code></p>
+							</dd>
+							<dt>example</dt>
+							<dd><p>const client = redis.createClient({
+									retry_strategy: function(options) {
+									if (options.error &amp;&amp; options.error.code === &quot;ECONNREFUSED&quot;) {
+									// End reconnecting on a specific error and flush all commands with
+									// a individual error
+									return new Error(&quot;The server refused the connection&quot;);
+									}
+									if (options.total_retry_time &gt; 1000 * 60 * 60) {
+									// End reconnecting after a specific timeout and flush all commands
+									// with a individual error
+									return new Error(&quot;Retry time exhausted&quot;);
+									}
+									if (options.attempt &gt; 10) {
+									// End reconnecting with built in error
+									return undefined;
+									}
+									// reconnect after
+									return Math.min(options.attempt * 100, 3000);
+									}
+								});</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="retry_unfulfilled_commands" class="tsd-anchor"></a>
@@ -315,9 +515,22 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#retry_unfulfilled_commands">retry_unfulfilled_commands</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:31</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:128</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to <code>true</code>, all commands that were unfulfilled while the connection is lost
+								will be retried after the connection has been reestablished.
+								Use this with caution if you use state altering commands (e.g. incr).
+							This is especially useful if you use blocking commands.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="return_buffers" class="tsd-anchor"></a>
@@ -326,9 +539,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#return_buffers">return_buffers</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:22</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:77</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to <code>true</code>, then all replies will be sent to callbacks as Buffers instead of Strings.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="socket_initial_delay" class="tsd-anchor"></a>
@@ -337,9 +560,20 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#socket_initial_delay">socket_initial_delay</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:25</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:97</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Initial Delay in milliseconds.
+							This will also set the initial delay for keep-alive packets being sent to Redis.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>0</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="socket_keepalive" class="tsd-anchor"></a>
@@ -348,9 +582,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#socket_keepalive">socket_keepalive</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:24</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:91</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to <code>true</code>, the keep-alive functionality is enabled on the underlying socket.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>true</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="string_numbers" class="tsd-anchor"></a>
@@ -359,9 +603,23 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#string_numbers">string_numbers</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:21</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:72</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code>, Node Redis will return Redis number values as Strings instead of javascript Numbers.
+								Useful if you need to handle big numbers (above <code>Number.MAX_SAFE_INTEGER</code> === 2^53).
+								Hiredis is incapable of this behavior, so setting this option to <code>true</code>
+								will result in the built-in javascript parser being used no matter
+							the value of the <code>parser</code> option.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="tls" class="tsd-anchor"></a>
@@ -370,9 +628,22 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#tls">tls</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:37</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:170</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An object containing options to pass to
+								<a href="http://nodejs.org/api/tls.html#tls_tls_connect_port_host_options_callback">tls.connect</a>
+								to set up a TLS connection to Redis
+							(if, for example, it is set up to be accessible via a tunnel).</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="uri" class="tsd-anchor"></a>
@@ -380,7 +651,7 @@
 					<div class="tsd-signature tsd-kind-icon">uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/chroventer/endb/blob/d456510/packages/redis/src/index.ts#L7">packages/redis/src/index.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/chroventer/endb/blob/7a598f2/packages/redis/src/index.ts#L7">packages/redis/src/index.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -391,9 +662,20 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_redis_src_index_.endbredisoptions.html">EndbRedisOptions</a>.<a href="_redis_src_index_.endbredisoptions.html#url">url</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/redis/ts3.1/index.d.ts:19</li>
+							<li>Defined in node_modules/@types/redis/index.d.ts:62</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The URL of the Redis server.<br>Format:
+							[redis[s]:]//[[user][:password@]][host][:port][/db-number][?db=db-number[&amp;password=bar[&amp;option=value]]]<br>More info avaliable at <a href="http://www.iana.org/assignments/uri-schemes/prov/redis">IANA</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -453,6 +735,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="_redis_src_index_.endbredisoptions.html#detect_buffers" class="tsd-kind-icon">detect_<wbr>buffers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_redis_src_index_.endbredisoptions.html#disable_resubscribing" class="tsd-kind-icon">disable_<wbr>resubscribing</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="_redis_src_index_.endbredisoptions.html#enable_offline_queue" class="tsd-kind-icon">enable_<wbr>offline_<wbr>queue</a>
